@@ -1,6 +1,10 @@
+<script setup>
+const route = useRoute()
+</script>
+
 <template lang="pug">
-div
-  h1.text-3xl.font-bold.underline
-    | Hello World
-  
+NuxtLayout
+  NuxtPage(:key='route.fullPath')
 </template>
+
+<style lang="scss" scoped></style>
