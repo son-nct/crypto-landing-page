@@ -33,7 +33,7 @@ export default defineNuxtConfig({
   nitro: {
     compressPublicAssets: true,
     prerender: {
-      crawlLinks: true,
+      // crawlLinks: true,
     },
   },
   // configure build module
@@ -46,8 +46,5 @@ export default defineNuxtConfig({
     preload: true,
     download: true,
     base64: false,
-    families: {
-      Arimo: true,
-    },
   },
 })

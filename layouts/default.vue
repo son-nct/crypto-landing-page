@@ -4,6 +4,7 @@ const route = useRoute()
 
 <template lang="pug">
 div
+    AppHeader
     slot
 </template>
 

@@ -2,9 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-}
+@font-face {
+  font-family: 'NeueMachina-Black';
+  src: url('../fonts/NeueMachina/NeueMachina-Black.otf');
+  font-display: swap;
+  }
+  
+  @font-face {
+  font-family: 'NeueMachina-Bold';
+  src: url('../fonts/NeueMachina/NeueMachina-Bold.otf');
+  font-display: swap;
+  }
+  
+  @font-face {
+  font-family: 'NeueMachina-Medium';
+  src: url('../fonts/NeueMachina/NeueMachina-Medium.otf');
+  font-display: swap;
+  }
+  
+  @font-face {
+  font-family: 'NeueMachina-Light';
+  src: url('../fonts/NeueMachina/NeueMachina-Light.otf');
+  font-display: swap;
+  }
+  
+  @font-face {
+  font-family: 'NeueMachina-Regular';
+  src: url('../fonts/NeueMachina/NeueMachina-Regular.otf');
+  font-display: swap;
+  }
+  
+  @font-face {
+  font-family: 'NeueMachina-Ultrabold';
+  src: url('../fonts/NeueMachina/NeueMachina-Ultrabold.otf');
+  font-display: swap;
+  }
 
-body {
-  @apply overflow-x-hidden antialiased;
-}
+  .small-btn {
+    @apply px-6 py-3 bg-primary font-ultraBold text-black;
+
+    &:hover {
+      @apply cursor-pointer;
+    }
+  
+  }

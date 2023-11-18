@@ -1,6 +1,6 @@
 <template lang="pug">
 div
-    | Home Page
+    p Home
 </template>
 
 <style lang="scss" scoped></style>
