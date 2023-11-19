@@ -13,9 +13,12 @@ export default {
       fontFamily: {
         sans: ['NeueMachina-Medium', 'sans-serif'],
         ultraBold: ['NeueMachina-Ultrabold'],
+        description: ['ApfelGrotezk-Regular', 'sans-serif']
       },
       colors: {
         primary: '#CBFB45',
+        secondary: '#f0f0f0',
+        light: '#f3f3f3'
       },
     },
   },

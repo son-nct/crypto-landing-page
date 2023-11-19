@@ -3,7 +3,6 @@ import { loadFull } from 'tsparticles'
 import { tsParticles } from 'tsparticles-engine'
 
 const { mode } = useRuntimeConfig().public.particles
-const show = ref(false)
 
 if (process.client && mode === 'custom') {
   await loadFull(tsParticles)
@@ -49,19 +48,73 @@ const options = {
     },
   },
   particles: {
+    number: {
+      value: 80,
+      density: {
+        enable: true,
+        value_area: 800,
+      },
+    },
     color: {
       value: '#CBFB45',
     },
-    links: {
-      color: '#CBFB45',
+    shape: {
+      type: 'circle',
+      stroke: {
+        width: 0,
+        color: '#CBFB45',
+      },
+      polygon: {
+        nb_sides: 5,
+      },
+      image: {
+        src: 'img/github.svg',
+        width: 100,
+        height: 100,
+      },
+    },
+    opacity: {
+      value: 0.5,
+      random: false,
+      anim: {
+        enable: false,
+        speed: 1,
+        opacity_min: 0.1,
+        sync: false,
+      },
+    },
+    size: {
+      value: 3,
+      random: true,
+      anim: {
+        enable: false,
+        speed: 40,
+        size_min: 0.1,
+        sync: false,
+      },
+    },
+    line_linked: {
       enable: true,
+      distance: 150,
+      color: '#CBFB45',
+      opacity: 0.4,
+      width: 1,
     },
     move: {
       enable: true,
+      speed: 3,
+      direction: 'none',
+      random: false,
+      straight: false,
+      out_mode: 'out',
+      bounce: false,
+      attract: {
+        enable: false,
+        rotateX: 600,
+        rotateY: 1200,
+      },
     },
-    number: {
-      value: 100,
-    },
+    retina_detect: true,
   },
 }
 </script>
@@ -72,6 +125,7 @@ div.element-section
       id="tsparticles"
       :options="options"
     )
+    slot
     
 </template>
 

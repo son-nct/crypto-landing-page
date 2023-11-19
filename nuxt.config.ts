@@ -37,7 +37,12 @@ export default defineNuxtConfig({
     },
   },
   // configure build module
-  modules: ['@nuxtjs/google-fonts', 'nuxt-particles'],
+  modules: [
+    '@nuxtjs/google-fonts',
+    'nuxt-particles',
+    '@nuxt/image',
+    'nuxt-icon',
+  ],
   particles: {
     mode: 'full',
     lazy: true,
@@ -50,5 +55,21 @@ export default defineNuxtConfig({
     preload: true,
     download: true,
     base64: false,
+  },
+  // configure nuxt img
+  image: {
+    provider: 'ipx',
+    dir: 'assets/imgs',
+    ipx: {
+      modifiers: {
+        quality: '80',
+        format: 'webp',
+      },
+    },
+  },
+  // configure nuxt icon
+  nuxtIcon: {
+    size: '24px', // default <Icon> size applied
+    class: 'icon', // default <Icon> class applied
   },
 })

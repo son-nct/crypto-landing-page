@@ -3,6 +3,18 @@
 @tailwind utilities;
 
 @font-face {
+  font-family: 'ApfelGrotezk-Regular';
+  src: url('../fonts/apfelGrotezk/ApfelGrotezk-Regular.otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ApfelGrotezk-RegularBrukt';
+  src: url('../fonts/apfelGrotezk/ApfelGrotezk-RegularBrukt.otf');
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'NeueMachina-Black';
   src: url('../fonts/NeueMachina/NeueMachina-Black.otf');
   font-display: swap;
@@ -47,7 +59,7 @@
 }
 
 .large-btn {
-  @apply px-6 py-4 bg-primary font-ultraBold text-black;
+  @apply px-6 py-4 text-lg bg-primary font-ultraBold text-black;
 
   &:hover {
     @apply cursor-pointer;
@@ -56,4 +68,12 @@
 
 .element-section {
   @apply relative pt-[115px] pb-[110px] px-0;
+}
+
+h2 {
+  @apply text-5xl;
+}
+
+p {
+  @apply text-base font-description font-normal text-light;
 }
