@@ -10,7 +10,7 @@ if (process.client && mode === 'custom') {
 
 const options = {
   fullScreen: {
-    enable: true,
+    enable: false,
     zIndex: -1,
   },
   background: {
@@ -120,13 +120,17 @@ const options = {
 </script>
 
 <template lang="pug">
-div.element-section
-    NuxtParticles(
-      id="tsparticles"
-      :options="options"
-    )
-    slot
+NuxtParticles(
+    id="tsparticles"
+    :options="options"
+  )
+slot
+   
     
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+#tsparticles {
+  @apply h-[800px] relative;
+}
+</style>

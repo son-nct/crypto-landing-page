@@ -47,7 +47,7 @@ header.relative.z-10
                               NuxtLink(:to='item.to' v-if='index % 2 !== 0').text-gray-500 {{ item.text }}
                               NuxtLink(:to='item.to' v-else).text-white {{ item.text }}
                   
-              div(class='w-1/3') 1
+              div(class='w-1/3').flex.justify-center.text-white Logo
               div(class='w-1/3').flex.justify-end
                 button.small-btn Login
 

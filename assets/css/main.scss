@@ -70,6 +70,10 @@
   @apply relative pt-[115px] pb-[110px] px-0;
 }
 
+.outline-btn {
+  @apply px-6 py-4 text-lg bg-transparent font-ultraBold text-black border border-black;
+}
+
 h2 {
   @apply text-5xl;
 }
