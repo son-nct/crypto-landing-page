@@ -37,10 +37,10 @@ const options = {
         distance: 400,
         duration: 2,
         opacity: 0.8,
-        size: 40,
+        size: 80,
       },
       push: {
-        quantity: 1,
+        quantity: 4,
       },
       repulse: {
         distance: 200,
@@ -69,8 +69,8 @@ const options = {
 <template lang="pug">
 div.element-section
     NuxtParticles(
-        id="tsparticles"
-        :options="options"
+      id="tsparticles"
+      :options="options"
     )
     
 </template>
