@@ -49,7 +49,7 @@ header.relative.z-10
                   
               div(class='w-1/3').flex.justify-center.text-white Logo
               div(class='w-1/3').flex.justify-end
-                button.small-btn Login
+                AtomsCustomButton(type='small') Login
 
 </template>
 

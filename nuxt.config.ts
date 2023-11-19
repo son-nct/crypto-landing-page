@@ -57,17 +57,6 @@ export default defineNuxtConfig({
     download: true,
     base64: false,
   },
-  // configure nuxt img
-  image: {
-    provider: 'ipx',
-    dir: 'assets/imgs',
-    ipx: {
-      modifiers: {
-        quality: '80',
-        format: 'webp',
-      },
-    },
-  },
   // configure nuxt icon
   nuxtIcon: {
     size: '24px', // default <Icon> size applied

@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import HomePage1 from '@/assets/imgs/home1.webp'
+</script>
+
+
 <template lang="pug">
 main
     article
@@ -14,8 +19,7 @@ main
                                 | Unlock potential of Compounding Yield
                                 br
                                 | Keep your collateral 100% safe. Supercharge your yields
-
-                            button.large-btn.flex.items-center
+                            AtomsCustomButton(type='large')
                                 | How it work
                                 Icon(name="uil:arrow-down" color="black" size='1.5rem').ml-2.-mt-1
         section.bg-dark
@@ -23,7 +27,7 @@ main
                 .element-section
                     div(class='relative w-full h-fit bg-primary rounded-3xl')
                         div(class='grid grid-cols-1 lg:grid-cols-2 p-12')
-                            w-full.flex.flex-col.gap-6.px-4
+                            .w-full.flex.flex-col.gap-6.px-4
                                 h2.uppercase.font-ultraBold.text-black
                                     | BUILT BY UNDERDOGS, FOR UNDERDOGS
                                 p.text-gray
@@ -39,10 +43,9 @@ main
                                     li.flex.items-center
                                         Icon(name="lets-icons:check-fill" color="gray" size='1.5rem').-ml-2.mr-2
                                         p.text-gray Maximized yield potential into Venture Investment opportunity.
-                                button.outline-btn.w-fit Learn more
-
-                            .w-full
-                                NuxtImg(src='/home1.png' class='w-full' class='lg:-mt-12')
+                                AtomsCustomButton(type='outline') Learn more
+                            div.w-full
+                                img(:src='HomePage1' alt='homepage' width='400' height='400' class='w-full lg:-mt-12')
         section.bg-dark2
             .container.mx-auto.p-10
                 .element-section
