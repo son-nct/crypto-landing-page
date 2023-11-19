@@ -1,5 +1,4 @@
-import type Container from 'postcss/lib/container';
-<script setup>
+<script setup lang="ts">
 const head = useHead({
   script: [
     {
@@ -37,7 +36,7 @@ const navigator = [
 <template lang="pug">
 header.relative.z-10
     section.bg-black
-        #cr-widget-marquee(data-coins='bitcoin,ethereum,tether,ripple,cardano' data-theme='dark' data-show-symbol='true' data-show-icon='true' data-show-period-change='true' data-period-change='24H' data-api-url='https://api.cryptorank.io/v0')
+      #cr-widget-marquee(data-coins='ethereum,lido-staked-ether,aleph-zero,injective-protocol,sei-network,cosmos,sui,aptos,matic-network,avalanche,kava,celestia,agoric' data-theme='dark' data-show-symbol='true' data-show-icon='true' data-show-period-change='true' data-period-change='24H' data-api-url='https://api.cryptorank.io/v0')
     section(class='bg-black/95').p-8.w-full.mx-auto
         div.container.mx-auto
           div.flex.items-center

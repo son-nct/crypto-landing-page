@@ -37,7 +37,11 @@ export default defineNuxtConfig({
     },
   },
   // configure build module
-  modules: ['@nuxtjs/google-fonts'],
+  modules: ['@nuxtjs/google-fonts', 'nuxt-particles'],
+  particles: {
+    mode: 'full',
+    lazy: true,
+  },
   googleFonts: {
     // Options
     display: 'swap',

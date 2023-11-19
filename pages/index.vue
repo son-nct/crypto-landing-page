@@ -1,6 +1,7 @@
 <template lang="pug">
-div
-    p Home
+main
+    article
+        MoleculesPartical
 </template>
 
 <style lang="scss" scoped></style>
