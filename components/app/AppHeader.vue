@@ -49,7 +49,7 @@ header.relative.z-10
                   
               div(class='w-1/3') 1
               div(class='w-1/3').flex.justify-end
-                btn.small-btn Login
+                button.small-btn Login
 
 </template>
 

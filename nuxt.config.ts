@@ -42,6 +42,7 @@ export default defineNuxtConfig({
     'nuxt-particles',
     '@nuxt/image',
     'nuxt-icon',
+    'nuxt-delay-hydration',
   ],
   particles: {
     mode: 'full',
@@ -71,5 +72,9 @@ export default defineNuxtConfig({
   nuxtIcon: {
     size: '24px', // default <Icon> size applied
     class: 'icon', // default <Icon> class applied
+  },
+  delayHydration: {
+    debug: process.env.NODE_ENV === 'development',
+    mode: 'init',
   },
 })
