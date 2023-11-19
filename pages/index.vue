@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import HomePage1 from '@/assets/imgs/home1.webp'
+import HomePage2 from '@/assets/imgs/home2.webp'
 </script>
-
 
 <template lang="pug">
 main
@@ -45,12 +45,28 @@ main
                                         p.text-gray Maximized yield potential into Venture Investment opportunity.
                                 AtomsCustomButton(type='outline') Learn more
                             div.w-full
-                                img(:src='HomePage1' alt='homepage' width='400' height='400' class='w-full lg:-mt-12')
-        section.bg-dark2
-            .container.mx-auto.p-10
+                                img(:src='HomePage1' alt='homepage' width='400' height='400' class='w-full lg:-mt-12' loading='lazy')
+        .bg-dark.relative.overflow-hidden
+            .absolute.inset-0.bg-pattern.bg-center.bg-no-repeat.bg-cover.bg-blend-overlay.mix-blend-overlay
+            .container.mx-auto.p-10.z-10
                 .element-section
-                    div(class='relative w-full h-fit bg-primary rounded-3xl')
-                    
+                    div(class='relative w-full h-fit rounded-3xl')
+                        .flex.flex-col.items-center.justify-center.gap-6.w-full
+                            h2.uppercase.font-ultraBold.text-white
+                                | YXY MAJOR PRODUCT FEATURES
+                            div(class='grid grid-cols-1 lg:grid-cols-3 gap-4 w-full')
+                                div.col-1.bg-card.p-10.rounded-lg
+                                    .flex.flex-col.gap-4
+                                        h5.uppercase.text-white.font-ultraBold INVESTMENT ACCESS
+                                        p.text-lightGray Decentralize NO-RISK-high-return investment opportunities for stakers
+                                div.col-1.bg-card.p-10.rounded-lg
+                                    .flex.flex-col.gap-4
+                                        h5.uppercase.text-white.font-ultraBold RISK-REWARD RATIO
+                                        p.text-lightGray Minimizing risk for principal tokens while maximizing yields
+                                div.col-1.bg-card.p-10.rounded-lg
+                                    .flex.flex-col.gap-4
+                                        h5.uppercase.text-white.font-ultraBold DUAL TOKEN
+                                        p.text-lightGray Allow token holders the freedom to invest future yields
 </template>
 
 <style lang="scss" scoped></style>

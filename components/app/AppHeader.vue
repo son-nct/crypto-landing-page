@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import Logo from '@/assets/imgs/logo.svg'
+
 const head = useHead({
   script: [
     {
@@ -44,10 +46,12 @@ header.relative.z-10
                   .px-2.flex.items-center
                       ul.list-none.p-0.flex.w-full
                           li.inline-block.list-none.ml-7.text-white(v-for='(item,index) in navigator' :key='item')
-                              NuxtLink(:to='item.to' v-if='index % 2 !== 0').text-gray-500 {{ item.text }}
+                              NuxtLink(:to='item.to' v-if='index % 2 !== 0').text-lightGray {{ item.text }}
                               NuxtLink(:to='item.to' v-else).text-white {{ item.text }}
                   
-              div(class='w-1/3').flex.justify-center.text-white Logo
+              div(class='w-1/3').flex.justify-center.text-white
+                img(:src='Logo' alt='Logo' width='207' height='32' class='w-10' loading='lazy')
+
               div(class='w-1/3').flex.justify-end
                 AtomsCustomButton(type='small') Login
 
