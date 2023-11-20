@@ -17,14 +17,14 @@ export default {
         description: ['ApfelGrotezk-Regular', 'sans-serif'],
       },
       colors: {
-        primary: '#CBFB45',
+        primary: '#cbfb45',
         secondary: '#f0f0f0',
         light: '#f3f3f3',
         lightGray: '#898990',
         dark: '#171616',
         gray: '#444544',
         card: '#232325',
-        dark2: '#010001',
+        dark2: '#111111',
       },
       backgroundImage: {
         pattern: `url('/assets/imgs/home2.webp')`,

@@ -39,7 +39,7 @@ const navigator = [
 header.relative.z-10
     section.bg-black
       #cr-widget-marquee(data-coins='ethereum,lido-staked-ether,aleph-zero,injective-protocol,sei-network,cosmos,sui,aptos,matic-network,avalanche,kava,celestia,agoric' data-theme='dark' data-show-symbol='true' data-show-icon='true' data-show-period-change='true' data-period-change='24H' data-api-url='https://api.cryptorank.io/v0')
-    section(class='bg-black/95').p-8.w-full.mx-auto
+    section(class='bg-dark').p-8.w-full.mx-auto
         div.container.mx-auto
           div.flex.items-center
               div(class='w-1/3')
@@ -53,7 +53,7 @@ header.relative.z-10
                 img(:src='Logo' alt='Logo' width='207' height='32' class='w-10' loading='lazy')
 
               div(class='w-1/3').flex.justify-end
-                AtomsCustomButton(type='small') Login
+                AtomsCustomButton(type='small' class='cursor-not-allowed') Login
 
 </template>
 

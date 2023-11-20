@@ -1,6 +1,11 @@
 <script setup lang="ts">
-import HomePage1 from '@/assets/imgs/home1.webp'
-import HomePage2 from '@/assets/imgs/home2.webp'
+const importAsset = (name: string) => import(`@/assets/imgs/icons/${name}.svg`)
+import homepage1 from '@/assets/imgs/home1.webp'
+import homepage2 from '@/assets/imgs/home2.webp'
+import asset1 from '@/assets/imgs/icons/asset1.svg'
+import asset2 from '@/assets/imgs/icons/asset2.svg'
+import asset3 from '@/assets/imgs/icons/asset3.svg'
+import background from '@/assets/imgs/icons/background.svg'
 </script>
 
 <template lang="pug">
@@ -45,8 +50,8 @@ main
                                         p.text-gray Maximized yield potential into Venture Investment opportunity.
                                 AtomsCustomButton(type='outline') Learn more
                             div.w-full
-                                img(:src='HomePage1' alt='homepage' width='400' height='400' class='w-full lg:-mt-12' loading='lazy')
-        .bg-dark.relative.overflow-hidden
+                                img(:src='homepage1' alt='homepage' width='400' height='400' class='w-full lg:-mt-12' loading='lazy')
+        section.bg-dark.relative.overflow-hidden
             .absolute.inset-0.bg-pattern.bg-center.bg-no-repeat.bg-cover.bg-blend-overlay.mix-blend-overlay
             .container.mx-auto.p-10.z-10
                 .element-section
@@ -57,14 +62,40 @@ main
                             div(class='grid grid-cols-1 lg:grid-cols-3 gap-4 w-full')
                                 div.col-1.bg-card.p-10.rounded-lg
                                     .flex.flex-col.gap-4
+                                        div.relative.w-20.h-20.rounded-full
+                                            div( style="background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 21.35%, rgba(203, 251, 69, 0.08) 100%);").w-20.h-20.rounded-full
+                                            img(:src='asset1' alt='asset 1' width='35' height='35' loading='lazy' class='transform-center')
                                         h5.uppercase.text-white.font-ultraBold INVESTMENT ACCESS
                                         p.text-lightGray Decentralize NO-RISK-high-return investment opportunities for stakers
                                 div.col-1.bg-card.p-10.rounded-lg
                                     .flex.flex-col.gap-4
+                                        div.relative.w-20.h-20.rounded-full
+                                            div( style="background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 21.35%, rgba(203, 251, 69, 0.08) 100%);").w-20.h-20.rounded-full
+                                            img(:src='asset2' alt='asset 2' width='35' height='35' loading='lazy' class='transform-center')
                                         h5.uppercase.text-white.font-ultraBold RISK-REWARD RATIO
                                         p.text-lightGray Minimizing risk for principal tokens while maximizing yields
                                 div.col-1.bg-card.p-10.rounded-lg
                                     .flex.flex-col.gap-4
+                                        div.relative.w-20.h-20.rounded-full
+                                            div( style="background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 21.35%, rgba(203, 251, 69, 0.08) 100%);").w-20.h-20.rounded-full
+                                            img(:src='asset3' alt='asset 3' width='35' height='35' loading='lazy' class='transform-center')
+                                        h5.uppercase.text-white.font-ultraBold DUAL TOKEN
+                                        p.text-lightGray Allow token holders the freedom to invest future yields
+        section.bg-dark2.relative.overflow-hidden
+            .container.mx-auto.p-10.z-10
+                .element-section
+                    div(class='relative w-full h-fit rounded-3xl')
+                        .flex.flex-col.items-center.justify-center.gap-6.w-full
+                            div(class='grid grid-cols-1 lg:grid-cols-2 gap-4 w-full')
+                                div.col-1.flex.flex-col.items-start.justify-center.w-full.h-full.p-8
+                                    h2.uppercase.font-ultraBold.text-white
+                                        | Cross-Chain
+                                        | liquidity staking derivative
+                                div.col-1.bg-card.p-10.rounded-lg
+                                    .flex.flex-col.gap-4
+                                        div.relative.w-20.h-20.rounded-full
+                                            div( style="background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 21.35%, rgba(203, 251, 69, 0.08) 100%);").w-20.h-20.rounded-full
+                                            img(:src='asset3' alt='asset 3' width='35' height='35' loading='lazy' class='transform-center')
                                         h5.uppercase.text-white.font-ultraBold DUAL TOKEN
                                         p.text-lightGray Allow token holders the freedom to invest future yields
 </template>

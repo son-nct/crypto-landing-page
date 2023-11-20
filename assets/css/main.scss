@@ -51,7 +51,7 @@
 }
 
 .small-btn {
-  @apply px-6 py-3 bg-primary font-ultraBold text-black;
+  @apply px-6 py-3 bg-primary/50 font-ultraBold text-black;
 
   &:hover {
     @apply cursor-pointer;
@@ -84,4 +84,8 @@ h5 {
 
 p {
   @apply text-base font-description font-normal text-light;
+}
+
+.transform-center {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
 }
