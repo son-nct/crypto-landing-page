@@ -1,2 +1,0 @@
-2. header trùng màu nền
-3. Login button unclickable
