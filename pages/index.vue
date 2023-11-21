@@ -91,13 +91,12 @@ main
                                     h2.uppercase.font-ultraBold.text-white
                                         | Cross-Chain
                                         | liquidity staking derivative
-                                div.col-1.bg-card.p-10.rounded-lg
-                                    .flex.flex-col.gap-4
-                                        div.relative.w-20.h-20.rounded-full
-                                            div( style="background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 21.35%, rgba(203, 251, 69, 0.08) 100%);").w-20.h-20.rounded-full
-                                            img(:src='asset3' alt='asset 3' width='35' height='35' loading='lazy' class='transform-center')
-                                        h5.uppercase.text-white.font-ultraBold DUAL TOKEN
-                                        p.text-lightGray Allow token holders the freedom to invest future yields
+                                div.col-1.flex.flex-col.items-start.justify-center.w-full.h-full.p-8.relative
+                                    .absolute.inset-0.bg-center.bg-no-repeat.bg-cover.bg-blend-overlay.mix-blend-soft-light
+                                        img(src='~/assets/imgs/icons/ellipse-right.svg' alt='ellipse' width='380' height='620' loading='lazy' class='transform-center').transform-center
+                                        img(src='~/assets/imgs/icons/ellipse-left.svg' alt='ellipse' width='470' height='620' loading='lazy' class='transform-center').transform-center
+                                    .absolute.inset-0.bg-center.bg-no-repeat.bg-cover.bg-blend-overlay.mix-blend-hard-light
+                                        img(src='~/assets/imgs/icons/background-green.svg' alt='ellipse' width='470' height='620' loading='lazy' class='transform-center').transform-center
 </template>
 
 <style lang="scss" scoped></style>
