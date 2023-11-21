@@ -29,6 +29,9 @@ export default {
       backgroundImage: {
         pattern: `url('/assets/imgs/home2.webp')`,
       },
+      minHeight: {
+        'slick-slide-custom': '80px',
+      },
     },
   },
   plugins: [],

@@ -89,3 +89,26 @@ p {
 .transform-center {
   @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
 }
+
+.slick-list {
+  @apply relative block overflow-hidden m-0 p-0;
+}
+
+.slick-track {
+  @apply opacity-100 w-[1736px] flex flex-wrap;
+}
+
+.slick-slide {
+  @apply w-1/3 h-[543px];
+  
+  & > div {
+    .content {
+      @apply min-h-slick-slide-custom;
+    }
+  }
+  
+}
+
+.line_dash {
+  @apply absolute left-[11px] z-20 h-[90%] w-[1px] border-l-[1px] border-dashed border-dark2;
+}
