@@ -28,9 +28,14 @@ export default {
       },
       backgroundImage: {
         pattern: `url('/assets/imgs/home2.webp')`,
+        footer: `url('/assets/imgs/footer.webp')`,
       },
       minHeight: {
         'slick-slide-custom': '80px',
+        'custom-button': '60px',
+      },
+      minWidth: {
+        'custom-button': '228px',
       },
     },
   },

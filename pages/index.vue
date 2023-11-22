@@ -172,49 +172,48 @@ main
                                                         div.mb-5
                                                             p.text-sm.text-black.content
                                                                 | {{ item.lowerHalf.content }}
-                                    //- .slick-slide
-                                    //-     div(class='h-1/2')
-                                    //-         .w-full.h-full.inline-block.float-none
-                                    //-             .h-full.flex.relative
-                                    //-                 .absolute.-bottom-2.left-0
-                                    //-                     Icon(name="lets-icons:check-fill" color="black" size='1.5rem')
-                                    //-                 .line_dash
-                                    //-                 .flex-1.flex-col.gap-2.relative.left-8
-                                    //-                     h6.uppercase.text-black.font-ultraBold Assemble Team
-                                    //-                     p.mb-5.text-lightGray Q1 2023
-                                    //-                     div(class='w-1/2').mb-5
-                                    //-                         p.text-sm.text-black.content
-                                    //-                            | We searched for people who
-                                    //-                            | are most passionate about the development of crypto to develop this product together.
-                                    //-     div(class='h-1/2 w-[70%]').ml-auto
-                                    //-         .w-full.h-full.inline-block.float-none
-                                    //-             .h-full.flex.relative
-                                    //-                 .absolute.-top-4.left-0
-                                    //-                     Icon(name="lets-icons:check-fill" color="black" size='1.5rem')
-                                    //-                 .line_dash.top-9 
-                                    //-                 .flex-1.flex-col.gap-2.relative.left-8.top-9 
-                                    //-                     h6.uppercase.text-black.font-ultraBold Private Beta Launch
-                                    //-                     p.mb-5.text-lightGray H1 2024
-                                    //-                     div.mb-5
-                                    //-                         p.text-sm.text-black.content
-                                    //-                             | Released Beta Launch with
-                                    //-                             | selected first blockchain and limited early beta testers.
-                                    //- .slick-slide
-                                        div(class='h-1/2')
-                                            .w-full.h-full.inline-block.float-none
-                                                .h-full.flex.relative
-                                                    .absolute.-bottom-2.left-0
-                                                        Icon(name="lets-icons:check-fill" color="black" size='1.5rem')
-                                                    .line_dash
-                                                    .flex-1.flex-col.gap-2.relative.left-8
-                                                        h6.uppercase.text-black.font-ultraBold Public Beta Launch
-                                                        p.mb-5.text-lightGray H3 2024
-                                                        div(class='w-1/2').mb-5
-                                                            p.text-sm.text-black.content
-                                                                | Open Public Beta version for|
-                                                                | majority users, integrated two to four blockchains.
+        section.bg-dark2.relative.overflow-hidden
+            .container.mx-auto.p-10.z-10
+                .element-section
+                    div(class='relative w-full h-fit rounded-3xl').py-10
+                        .flex.flex-col.items-center.justify-center.gap-6.w-full
+                            div(class='grid grid-cols-1 lg:grid-cols-2 gap-4 w-full')
+                                div.col-1.flex.flex-col.gap-4.items-start.justify-center.w-full.h-full.p-8
+                                    h2.uppercase.font-ultraBold.text-white
+                                        | EARLY BIRDS
+                                        br
+                                        | GET THE ALPHA
+                                    p.text-lg.text-lightGray Sign up for Waitlist
+                                    .flex.items-center.w-full
+                                        div(class='w-2/3').border.border-primary.h-14
+                                            input(type='text' class='placeholder:text-primary' placeholder="You email address...").w-full.h-full.p-4.outline-none.border-none.bg-transparent.text-primary
+                                        button(type='button').bg-primary.font-ultraBold.px-6.py-3.h-14.cursor-pointer Sign Up
+                                div.col-1.flex.flex-col.items-start.justify-center.w-full.h-full.p-8.relative
+                                    .absolute.inset-0.top-0.bg-center.bg-no-repeat.bg-cover.w-full
+                                        img(src='~/assets/imgs/icons/global.svg' alt='ellipse' width='855' height='482' loading='lazy' class='transform-center').transform-center
+                                    .absolute.inset-0.bg-center.bg-no-repeat.bg-cover.bg-blend-overlay.mix-blend-normal
+                                        img(src='~/assets/imgs/icons/background-blue.svg' alt='ellipse' width='470' height='620' loading='lazy' class='transform-center').transform-center
                                        
-     
+        section.bg-primary.relative.overflow-hidden
+            .container.mx-auto.p-10.z-10.bg-pattern2.bg-center.bg-no-repeat.bg-cover.relative.overflow-hidden
+                .element-section
+                    div(class='relative w-full h-fit rounded-3xl').flex.flex-col.items-center.justify-center.gap-14.w-full
+                        h2(class='w-2/3').uppercase.font-ultraBold.text-BLACK.text-center
+                            | Venture Investing with NO RISK
+                            | Now!!!
+                        div(class='flex flex-col md:flex-row items-center justify-center gap-8 w-full')
+                            AtomsCustomButton(type='outline-gray').outline-btn-gray Login
+                            AtomsCustomButton(type='outline-gray').outline-btn-gray.flex.items-center
+                                img(src='~/assets/imgs/icons/google-play_3.svg' alt='crosschain icon' width='36' height='38' loading='lazy')
+                                .flex.flex-col.ml-2.items-start.-translate-y-1
+                                    p.text-sm.text-gray.uppercase.translate-y-1 GET IT ON
+                                    h5.text-medium.font-description.font-bold Google Play
+                            AtomsCustomButton(type='outline-gray').outline-btn-gray.flex.items-center
+                                img(src='~/assets/imgs/icons/apple.svg' alt='crosschain icon' width='42' height='38' loading='lazy').-translate-y-1
+                                .flex.flex-col.ml-2.items-start.-translate-y-1
+                                    p.text-sm.text-gray.uppercase.translate-y-1 DOWNLOAD ON THE
+                                    h5.text-medium.font-description.font-bold App Store
+
                                     
 </template>
 

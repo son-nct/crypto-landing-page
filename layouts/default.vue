@@ -6,6 +6,7 @@ const route = useRoute()
 div
     AppHeader
     slot
+    AppFooter
 </template>
 
 <style lang="scss" scoped></style>

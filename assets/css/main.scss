@@ -70,8 +70,16 @@
   @apply relative pt-[115px] pb-[110px] px-0;
 }
 
+.footer-section {
+  @apply relative py-10 px-0;
+}
+
 .outline-btn {
   @apply px-6 py-4 text-lg bg-transparent font-ultraBold text-black border border-black;
+}
+
+.outline-btn-gray {
+  @apply flex items-center justify-center box-border px-6 py-1 rounded-md text-lg bg-transparent font-ultraBold text-gray border-2 border-gray min-w-custom-button min-h-custom-button;
 }
 
 h2 {
