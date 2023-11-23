@@ -4,7 +4,7 @@
 main
     article
         ClientOnly
-            MoleculesParticalWave2
+            MoleculesParticalWave
 </template>
 
 <style scoped></style>
