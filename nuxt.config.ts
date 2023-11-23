@@ -20,6 +20,8 @@ export default defineNuxtConfig({
       ],
       // link: [{ rel: 'icon', type: 'image/png', href: '/favicon.png' }]
     },
+    layoutTransition: { name: 'layout', mode: 'out-in' }, // out-in
+    pageTransition: { name: 'page', mode: 'out-in' },
   },
   // configure tailwind and css
   postcss: {
@@ -33,7 +35,7 @@ export default defineNuxtConfig({
   nitro: {
     compressPublicAssets: true,
     prerender: {
-      routes: ['/'],
+      routes: ['/','/mechanism'],
       // crawlLinks: true,
     },
   },

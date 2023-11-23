@@ -19,8 +19,8 @@ const navigator = [
     to: '/ecosystem',
   },
   {
-    text: 'Investor',
-    to: '/investor',
+    text: 'Mechanism',
+    to: '/mechanism',
   },
   {
     text: 'Portfolio',
@@ -45,7 +45,11 @@ header.relative.z-10
                       ul.list-none.p-0.flex.w-full
                           li.inline-block.list-none.ml-7.text-white(v-for='(item,index) in navigator' :key='item')
                               NuxtLink(:to='item.to' v-if='index % 2 !== 0').text-lightGray {{ item.text }}
-                              NuxtLink(:to='item.to' v-else).text-white {{ item.text }}
+                                span.link__style
+                                  | &nbsp;
+                              NuxtLink.link(:to='item.to' v-else).text-white {{ item.text }}
+                                span.link__style
+                                  | &nbsp;
                   
               div(class='w-1/3').flex.justify-center.text-white
                 img(src='~/assets/imgs/logo.svg' alt='Logo' width='207' height='32' class='w-10' loading='lazy')
@@ -56,6 +60,21 @@ header.relative.z-10
 </template>
 
 <style lang="scss" scoped>
-.cryptohopper-web-widget {
+.router-link-active {
+  @apply border-b border-primary cursor-default;
+}
+
+.link {
+  @apply relative;
+
+  &__style {
+    @apply h-[1px] inline-block w-0 bg-primary absolute -bottom-0.5 left-0 z-10;
+  }
+
+  &:not(.active):hover {
+    .link__style {
+      @apply w-full ease-out duration-300;
+    }
+  }
 }
 </style>
