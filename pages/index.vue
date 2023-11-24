@@ -1,46 +1,46 @@
 <script setup lang="ts">
 const backgroundStyle = ref({
-  background:
-    'radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 21.35%, rgba(203, 251, 69, 0.08) 100%)',
+    background:
+        'radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 21.35%, rgba(203, 251, 69, 0.08) 100%)'
 })
 
 const carouselSlides = [
-  {
-    upperHalf: {
-      title: 'Project Idea',
-      date: 'Q2 2021',
-      content:
-        "The project's idea was created during the market boom with the goal of how retail investors could have a chance to compete with professional investors.",
+    {
+        upperHalf: {
+            title: 'Project Idea',
+            date: 'Q2 2021',
+            content:
+                "The project's idea was created during the market boom with the goal of how retail investors could have a chance to compete with professional investors.",
+        },
+        lowerHalf: {
+            title: 'Finalized Model',
+            date: 'Q3 2022',
+            content:
+                'After various designs and adjusting the model to find the most suitable design for the market, with the development of LSD in The Merge - Ethereum events, the model has been finalized using the liquidity staking mechanism as the core of the model.',
+        },
     },
-    lowerHalf: {
-      title: 'Finalized Model',
-      date: 'Q3 2022',
-      content:
-        'After various designs and adjusting the model to find the most suitable design for the market, with the development of LSD in The Merge - Ethereum events, the model has been finalized using the liquidity staking mechanism as the core of the model.',
+    {
+        upperHalf: {
+            title: 'Assemble Team',
+            date: 'Q1 2023',
+            content:
+                'We searched for people who are most passionate about the development of crypto to develop this product together.',
+        },
+        lowerHalf: {
+            title: 'Private Beta Launch',
+            date: 'H1 2024',
+            content:
+                'Released Beta Launch with selected first blockchain and limited early beta testers.',
+        },
     },
-  },
-  {
-    upperHalf: {
-      title: 'Assemble Team',
-      date: 'Q1 2023',
-      content:
-        'We searched for people who are most passionate about the development of crypto to develop this product together.',
+    {
+        upperHalf: {
+            title: 'Public Beta Launch',
+            date: 'H3 2024',
+            content:
+                'Open Public Beta version for majority users, integrated two to four blockchains.',
+        },
     },
-    lowerHalf: {
-      title: 'Private Beta Launch',
-      date: 'H1 2024',
-      content:
-        'Released Beta Launch with selected first blockchain and limited early beta testers.',
-    },
-  },
-  {
-    upperHalf: {
-      title: 'Public Beta Launch',
-      date: 'H3 2024',
-      content:
-        'Open Public Beta version for majority users, integrated two to four blockchains.',
-    },
-  },
 ]
 </script>
 
@@ -193,7 +193,7 @@ main
                                         img(src='~/assets/imgs/icons/global.svg' alt='ellipse' width='855' height='482' loading='lazy' class='transform-center').transform-center
                                     .absolute.inset-0.bg-center.bg-no-repeat.bg-cover.bg-blend-overlay.mix-blend-normal
                                         img(src='~/assets/imgs/icons/background-blue.svg' alt='ellipse' width='470' height='620' loading='lazy' class='transform-center').transform-center
-                                       
+
         section.bg-primary.relative.overflow-hidden
             .container.mx-auto.p-10.z-10.bg-pattern2.bg-center.bg-no-repeat.bg-cover.relative.overflow-hidden
                 .element-section

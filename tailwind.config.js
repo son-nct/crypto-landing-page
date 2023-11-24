@@ -22,9 +22,12 @@ export default {
         light: '#f3f3f3',
         lightGray: '#898990',
         dark: '#171616',
+        dark2: '#111010',
         gray: '#444544',
         card: '#232325',
         dark2: '#111111',
+        neutral: '#5D5D5D',
+        neutralPink: '#BFBFBF'
       },
       backgroundImage: {
         pattern: `url('/assets/imgs/home2.webp')`,

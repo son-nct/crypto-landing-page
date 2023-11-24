@@ -5,45 +5,36 @@ slot
 
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue';
-import { debounce } from 'lodash-es';
 
 const container = ref(null);
 const SEPARATION = 100, AMOUNTX = 50, AMOUNTY = 50;
 let camera, scene, renderer;
 let particles = [];
 // let particles, particle, count = 0;
-let  stats;
+let stats;
 let count = 0;
 let mouseX = 0, mouseY = 0;
 let windowHalfX = window.innerWidth / 2;
 let windowHalfY = window.innerHeight / 2;
 
-// Debounced event handlers
-const debouncedResize = debounce(onWindowResize, 100);
-const debouncedMouseMove = debounce(onDocumentMouseMove, 10);
-const debouncedTouchMove = debounce(onDocumentTouchMove, 10);
 
-onMounted(async() => {
+onMounted(async () => {
   const THREE = await import('three');
   init(THREE);
   animate();
 
-   // Add event listeners
-   window.addEventListener('resize', debouncedResize);
-  document.addEventListener('mousemove', debouncedMouseMove);
+  // Add event listeners
+  window.addEventListener('resize', onWindowResize);
+  document.addEventListener('mousemove', onDocumentMouseMove);
   document.addEventListener('touchstart', onDocumentTouchStart);
-  document.addEventListener('touchmove', debouncedTouchMove);
+  document.addEventListener('touchmove', onDocumentTouchMove);
 });
 
 onUnmounted(() => {
-  window.removeEventListener('resize', debouncedResize);
-  document.removeEventListener('mousemove', debouncedMouseMove);
+  window.removeEventListener('resize', onWindowResize);
+  document.removeEventListener('mousemove', onDocumentMouseMove);
   document.removeEventListener('touchstart', onDocumentTouchStart);
-  document.removeEventListener('touchmove', debouncedTouchMove);
-
-  // Dispose THREE.js objects
-  scene.clear();
-  renderer.dispose();
+  document.removeEventListener('touchmove', onDocumentTouchMove);
 });
 
 function init(THREE) {
@@ -123,10 +114,10 @@ function animate() {
 }
 
 function render() {
-  renderer.setClearColor( 0x07074e, 1);
-  camera.position.x += ( mouseX - camera.position.x ) * .05;
-  camera.position.y += ( - mouseY - camera.position.y ) * .05;
-  camera.lookAt( scene.position );
+  renderer.setClearColor(0x07074e, 1);
+  camera.position.x += (mouseX - camera.position.x) * .05;
+  camera.position.y += (- mouseY - camera.position.y) * .05;
+  camera.lookAt(scene.position);
   var i = 0;
   for (var ix = 0; ix < AMOUNTX; ix++) {
     for (var iy = 0; iy < AMOUNTY; iy++) {
