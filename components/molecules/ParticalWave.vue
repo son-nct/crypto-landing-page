@@ -1,10 +1,11 @@
-<template>
-  <div ref="container"></div>
+<template lang="pug">
+#particalWave(ref='container')
+slot
 </template>
 
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue';
-import * as THREE from 'three';
+import { debounce } from 'lodash-es';
 
 const container = ref(null);
 const SEPARATION = 100, AMOUNTX = 50, AMOUNTY = 50;
@@ -17,24 +18,35 @@ let mouseX = 0, mouseY = 0;
 let windowHalfX = window.innerWidth / 2;
 let windowHalfY = window.innerHeight / 2;
 
-onMounted(() => {
-  init();
+// Debounced event handlers
+const debouncedResize = debounce(onWindowResize, 100);
+const debouncedMouseMove = debounce(onDocumentMouseMove, 10);
+const debouncedTouchMove = debounce(onDocumentTouchMove, 10);
+
+onMounted(async() => {
+  const THREE = await import('three');
+  init(THREE);
   animate();
 
-  window.addEventListener('resize', onWindowResize);
-  document.addEventListener('mousemove', onDocumentMouseMove);
+   // Add event listeners
+   window.addEventListener('resize', debouncedResize);
+  document.addEventListener('mousemove', debouncedMouseMove);
   document.addEventListener('touchstart', onDocumentTouchStart);
-  document.addEventListener('touchmove', onDocumentTouchMove);
+  document.addEventListener('touchmove', debouncedTouchMove);
 });
 
 onUnmounted(() => {
-  window.removeEventListener('resize', onWindowResize);
-  document.removeEventListener('mousemove', onDocumentMouseMove);
+  window.removeEventListener('resize', debouncedResize);
+  document.removeEventListener('mousemove', debouncedMouseMove);
   document.removeEventListener('touchstart', onDocumentTouchStart);
-  document.removeEventListener('touchmove', onDocumentTouchMove);
+  document.removeEventListener('touchmove', debouncedTouchMove);
+
+  // Dispose THREE.js objects
+  scene.clear();
+  renderer.dispose();
 });
 
-function init() {
+function init(THREE) {
   camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000);
   camera.position.z = 1000;
 
@@ -130,5 +142,7 @@ function render() {
 </script>
 
 <style scoped>
-/* Your styles here */
+#particalWave {
+  @apply h-[800px] relative;
+}
 </style>

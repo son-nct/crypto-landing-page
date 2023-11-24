@@ -30,7 +30,7 @@ const footerSections = ref([
 <template lang="pug">
 footer.bg-dark.relative.overflow-hidden
     .absolute.inset-0.bg-footer.bg-center.bg-no-repeat.bg-cover.bg-blend-overlay
-    .container.mx-auto.z-10
+    .container.mx-auto.p-10.z-10
         .footer-section
             div(class="xl:grid xl:grid-cols-3 xl:gap-8")
                 div(class="space-y-8 xl:col-span-1")
