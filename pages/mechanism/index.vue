@@ -55,7 +55,7 @@ main
                     .container.mx-auto
                         .element-section
                             .flex.flex-col.items-center.justify-center.gap-8.text-center
-                                h2.uppercase.font-ultraBold.text-white
+                                h2.uppercase.font-ultraBold.text-white.text-center
                                     | Experience venture investing 
                                     | NO RISK
                                 p.text-center.text-lightGray

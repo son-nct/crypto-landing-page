@@ -68,7 +68,7 @@
 }
 
 .element-section {
-  @apply relative pt-[115px] pb-[110px] px-0;
+  @apply relative pt-14 pb-12 lg:pt-[115px] lg:pb-[110px] px-0;
 }
 
 .footer-section {
@@ -84,7 +84,11 @@
 }
 
 h2 {
-  @apply text-5xl;
+  @apply text-3xl text-left lg:text-5xl;
+}
+
+h3 {
+  @apply text-3xl text-left lg:text-5xl;
 }
 
 h5 {
@@ -100,7 +104,7 @@ p {
 }
 
 .slick-list {
-  @apply relative block overflow-hidden m-0 p-0;
+  @apply relative block overflow-hidden duration-300 ease-out scroll-smooth m-0 p-0;
 }
 
 .slick-track {
@@ -108,14 +112,11 @@ p {
 }
 
 .slick-slide {
-  @apply w-1/3 h-[543px];
+  @apply w-1/3 h-[400px] lg:h-[543px];
   
-  & > div {
-    .content {
-      @apply min-h-slick-slide-custom;
-    }
+  & > div:nth-child(2) .content {
+    @apply w-[44%];
   }
-  
 }
 
 .slick-slide-2 {

@@ -464,6 +464,75 @@
     semver "^7.3.5"
     tar "^6.1.11"
 
+"@motionone/animation@^10.16.3":
+  version "10.16.3"
+  resolved "https://registry.npmjs.org/@motionone/animation/-/animation-10.16.3.tgz"
+  integrity sha512-QUGWpLbMFLhyqKlngjZhjtxM8IqiJQjLK0DF+XOF6od9nhSvlaeEpOY/UMCRVcZn/9Tr2rZO22EkuCIjYdI74g==
+  dependencies:
+    "@motionone/easing" "^10.16.3"
+    "@motionone/types" "^10.16.3"
+    "@motionone/utils" "^10.16.3"
+    tslib "^2.3.1"
+
+"@motionone/dom@^10.16.4":
+  version "10.16.4"
+  resolved "https://registry.npmjs.org/@motionone/dom/-/dom-10.16.4.tgz"
+  integrity sha512-HPHlVo/030qpRj9R8fgY50KTN4Ko30moWRTA3L3imrsRBmob93cTYmodln49HYFbQm01lFF7X523OkKY0DX6UA==
+  dependencies:
+    "@motionone/animation" "^10.16.3"
+    "@motionone/generators" "^10.16.4"
+    "@motionone/types" "^10.16.3"
+    "@motionone/utils" "^10.16.3"
+    hey-listen "^1.0.8"
+    tslib "^2.3.1"
+
+"@motionone/easing@^10.16.3":
+  version "10.16.3"
+  resolved "https://registry.npmjs.org/@motionone/easing/-/easing-10.16.3.tgz"
+  integrity sha512-HWTMZbTmZojzwEuKT/xCdvoMPXjYSyQvuVM6jmM0yoGU6BWzsmYMeB4bn38UFf618fJCNtP9XeC/zxtKWfbr0w==
+  dependencies:
+    "@motionone/utils" "^10.16.3"
+    tslib "^2.3.1"
+
+"@motionone/generators@^10.16.4":
+  version "10.16.4"
+  resolved "https://registry.npmjs.org/@motionone/generators/-/generators-10.16.4.tgz"
+  integrity sha512-geFZ3w0Rm0ZXXpctWsSf3REGywmLLujEjxPYpBR0j+ymYwof0xbV6S5kGqqsDKgyWKVWpUInqQYvQfL6fRbXeg==
+  dependencies:
+    "@motionone/types" "^10.16.3"
+    "@motionone/utils" "^10.16.3"
+    tslib "^2.3.1"
+
+"@motionone/svelte@^10.16.4":
+  version "10.16.4"
+  resolved "https://registry.npmjs.org/@motionone/svelte/-/svelte-10.16.4.tgz"
+  integrity sha512-zRVqk20lD1xqe+yEDZhMYgftsuHc25+9JSo+r0a0OWUJFocjSV9D/+UGhX4xgJsuwB9acPzXLr20w40VnY2PQA==
+  dependencies:
+    "@motionone/dom" "^10.16.4"
+    tslib "^2.3.1"
+
+"@motionone/types@^10.16.3":
+  version "10.16.3"
+  resolved "https://registry.npmjs.org/@motionone/types/-/types-10.16.3.tgz"
+  integrity sha512-W4jkEGFifDq73DlaZs3HUfamV2t1wM35zN/zX7Q79LfZ2sc6C0R1baUHZmqc/K5F3vSw3PavgQ6HyHLd/MXcWg==
+
+"@motionone/utils@^10.16.3":
+  version "10.16.3"
+  resolved "https://registry.npmjs.org/@motionone/utils/-/utils-10.16.3.tgz"
+  integrity sha512-WNWDksJIxQkaI9p9Z9z0+K27xdqISGNFy1SsWVGaiedTHq0iaT6iZujby8fT/ZnZxj1EOaxJtSfUPCFNU5CRoA==
+  dependencies:
+    "@motionone/types" "^10.16.3"
+    hey-listen "^1.0.8"
+    tslib "^2.3.1"
+
+"@motionone/vue@^10.16.4":
+  version "10.16.4"
+  resolved "https://registry.npmjs.org/@motionone/vue/-/vue-10.16.4.tgz"
+  integrity sha512-z10PF9JV6SbjFq+/rYabM+8CVlMokgl8RFGvieSGNTmrkQanfHn+15XBrhG3BgUfvmTeSeyShfOHpG0i9zEdcg==
+  dependencies:
+    "@motionone/dom" "^10.16.4"
+    tslib "^2.3.1"
+
 "@netlify/functions@^2.4.0":
   version "2.4.0"
   resolved "https://registry.npmjs.org/@netlify/functions/-/functions-2.4.0.tgz"
@@ -660,7 +729,7 @@
   optionalDependencies:
     ipx "^2.0.0"
 
-"@nuxt/kit@^3.6.5", "@nuxt/kit@^3.7.4", "@nuxt/kit@^3.8.1", "@nuxt/kit@3.8.1":
+"@nuxt/kit@^3.5.1", "@nuxt/kit@^3.6.5", "@nuxt/kit@^3.7.4", "@nuxt/kit@^3.8.1", "@nuxt/kit@3.8.1":
   version "3.8.1"
   resolved "https://registry.npmjs.org/@nuxt/kit/-/kit-3.8.1.tgz"
   integrity sha512-DrhG1Z85iH68QOTkgfb0HVfM2g7+CfcMWrFWMDwck9ofyM2RXQUZyfmvMedwBnui1AjjpgpLO9078yZM+RqNUg==
@@ -1050,6 +1119,11 @@
   resolved "https://registry.npmjs.org/@types/semver/-/semver-7.5.5.tgz"
   integrity sha512-+d+WYC1BxJ6yVOgUgzK8gWvp5qF8ssV5r4nsDcZWKRWcDQLQ619tvWAxJQYGgBrO1MnLJC7a5GtiYsAoQ47dJg==
 
+"@types/web-bluetooth@^0.0.20":
+  version "0.0.20"
+  resolved "https://registry.npmjs.org/@types/web-bluetooth/-/web-bluetooth-0.0.20.tgz"
+  integrity sha512-g9gZnnXVq7gM7v3tJCWV/qw7w+KeOlSHAhgF9RytFyifW6AF61hdT2ucrYhPq9hLs5JIryeupHV3qGk95dH9ow==
+
 "@typescript-eslint/eslint-plugin@^6.5.0":
   version "6.11.0"
   resolved "https://registry.npmjs.org/@typescript-eslint/eslint-plugin/-/eslint-plugin-6.11.0.tgz"
@@ -1367,6 +1441,54 @@
   version "3.3.8"
   resolved "https://registry.npmjs.org/@vue/shared/-/shared-3.3.8.tgz"
   integrity sha512-8PGwybFwM4x8pcfgqEQFy70NaQxASvOC5DJwLQfpArw1UDfUXrJkdxD3BhVTMS+0Lef/TU7YO0Jvr0jJY8T+mw==
+
+"@vueuse/core@^10.1.2", "@vueuse/core@10.6.1":
+  version "10.6.1"
+  resolved "https://registry.npmjs.org/@vueuse/core/-/core-10.6.1.tgz"
+  integrity sha512-Pc26IJbqgC9VG1u6VY/xrXXfxD33hnvxBnKrLlA2LJlyHII+BSrRoTPJgGYq7qZOu61itITFUnm6QbacwZ4H8Q==
+  dependencies:
+    "@types/web-bluetooth" "^0.0.20"
+    "@vueuse/metadata" "10.6.1"
+    "@vueuse/shared" "10.6.1"
+    vue-demi ">=0.14.6"
+
+"@vueuse/metadata@10.6.1":
+  version "10.6.1"
+  resolved "https://registry.npmjs.org/@vueuse/metadata/-/metadata-10.6.1.tgz"
+  integrity sha512-qhdwPI65Bgcj23e5lpGfQsxcy0bMjCAsUGoXkJ7DsoeDUdasbZ2DBa4dinFCOER3lF4gwUv+UD2AlA11zdzMFw==
+
+"@vueuse/motion@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/@vueuse/motion/-/motion-2.0.0.tgz"
+  integrity sha512-V3TAlbt1OPmb9DZFoFCz9WC3Oue54t9VHlavSWm+VU1JNimYcd+pc6aGR/hgaHUAU9tOPRHoDTleSrv2zrdIsw==
+  dependencies:
+    "@vueuse/core" "^10.1.2"
+    "@vueuse/shared" "^10.1.2"
+    csstype "^3.1.2"
+    framesync "^6.1.2"
+    popmotion "^11.0.5"
+    style-value-types "^5.1.2"
+  optionalDependencies:
+    "@nuxt/kit" "^3.5.1"
+
+"@vueuse/nuxt@^10.6.1":
+  version "10.6.1"
+  resolved "https://registry.npmjs.org/@vueuse/nuxt/-/nuxt-10.6.1.tgz"
+  integrity sha512-MnXg0ZviWHKcf2CsBYeHXhK9Pqn2TF7EJfaLgd+3rHEyb6XlSLUKBTPNCiO+5VH3Ck1IJAez90KS3VAdSqqs1w==
+  dependencies:
+    "@nuxt/kit" "^3.8.1"
+    "@vueuse/core" "10.6.1"
+    "@vueuse/metadata" "10.6.1"
+    local-pkg "^0.5.0"
+    nuxt "^3.8.1"
+    vue-demi ">=0.14.6"
+
+"@vueuse/shared@^10.1.2", "@vueuse/shared@10.6.1":
+  version "10.6.1"
+  resolved "https://registry.npmjs.org/@vueuse/shared/-/shared-10.6.1.tgz"
+  integrity sha512-TECVDTIedFlL0NUfHWncf3zF9Gc4VfdxfQc8JFwoVZQmxpONhLxFrlm0eHQeidHj4rdTPL3KXJa0TZCk1wnc5Q==
+  dependencies:
+    vue-demi ">=0.14.6"
 
 abbrev@^2.0.0:
   version "2.0.0"
@@ -3079,6 +3201,13 @@ fraction.js@^4.3.6:
   resolved "https://registry.npmjs.org/fraction.js/-/fraction.js-4.3.7.tgz"
   integrity sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==
 
+framesync@^6.1.2, framesync@6.1.2:
+  version "6.1.2"
+  resolved "https://registry.npmjs.org/framesync/-/framesync-6.1.2.tgz"
+  integrity sha512-jBTqhX6KaQVDyus8muwZbBeGGP0XgujBRbQ7gM7BRdS3CadCZIHiawyzYLnafYcvZIh5j8WE7cxZKFn7dXhu9g==
+  dependencies:
+    tslib "2.4.0"
+
 fresh@0.5.2:
   version "0.5.2"
   resolved "https://registry.npmjs.org/fresh/-/fresh-0.5.2.tgz"
@@ -3468,6 +3597,11 @@ hasown@^2.0.0:
   integrity sha512-vUptKVTpIJhcczKBbgnS+RtcuYMB8+oNzPK2/Hp3hanz8JmpATdmmgLgSaadVREkDm+e2giHwY3ZRkyjSIDDFA==
   dependencies:
     function-bind "^1.1.2"
+
+hey-listen@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.npmjs.org/hey-listen/-/hey-listen-1.0.8.tgz"
+  integrity sha512-COpmrF2NOg4TBWUJ5UVyaCU2A88wEMkUPK4hNqyCkqHbxT92BbvfjoSozkAIIm6XhicGlJHhFdullInrdhwU8Q==
 
 hookable@^5.5.3:
   version "5.5.3"
@@ -4454,6 +4588,18 @@ mlly@^1.2.0, mlly@^1.3.0, mlly@^1.4.0, mlly@^1.4.2:
     pkg-types "^1.0.3"
     ufo "^1.3.0"
 
+motion@^10.14.2, motion@^10.16.4:
+  version "10.16.4"
+  resolved "https://registry.npmjs.org/motion/-/motion-10.16.4.tgz"
+  integrity sha512-wvBeT0sZNgU6Od1aimjywBikqzm5yE97+L9eM/AoLy01AXNPdcnSDVHB3CoR0dGdHMbp/S0A/PjsJfWg0+k8Mg==
+  dependencies:
+    "@motionone/animation" "^10.16.3"
+    "@motionone/dom" "^10.16.4"
+    "@motionone/svelte" "^10.16.4"
+    "@motionone/types" "^10.16.3"
+    "@motionone/utils" "^10.16.3"
+    "@motionone/vue" "^10.16.4"
+
 mri@^1.2.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/mri/-/mri-1.2.0.tgz"
@@ -5200,6 +5346,16 @@ pluralize@^8.0.0:
   version "8.0.0"
   resolved "https://registry.npmjs.org/pluralize/-/pluralize-8.0.0.tgz"
   integrity sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==
+
+popmotion@^11.0.5:
+  version "11.0.5"
+  resolved "https://registry.npmjs.org/popmotion/-/popmotion-11.0.5.tgz"
+  integrity sha512-la8gPM1WYeFznb/JqF4GiTkRRPZsfaj2+kCxqQgr2MJylMmIKUwBfWW8Wa5fml/8gmtlD5yI01MP1QCZPWmppA==
+  dependencies:
+    framesync "6.1.2"
+    hey-listen "^1.0.8"
+    style-value-types "5.1.2"
+    tslib "2.4.0"
 
 postcss-calc@^9.0.0:
   version "9.0.1"
@@ -6401,6 +6557,14 @@ strip-literal@^1.3.0:
   dependencies:
     acorn "^8.10.0"
 
+style-value-types@^5.1.2, style-value-types@5.1.2:
+  version "5.1.2"
+  resolved "https://registry.npmjs.org/style-value-types/-/style-value-types-5.1.2.tgz"
+  integrity sha512-Vs9fNreYF9j6W2VvuDTP7kepALi7sk0xtk2Tu8Yxi9UoajJdEVpNpCov0HsLTqXvNGKX+Uv09pkozVITi1jf3Q==
+  dependencies:
+    hey-listen "^1.0.8"
+    tslib "2.4.0"
+
 stylehacks@^6.0.0:
   version "6.0.0"
   resolved "https://registry.npmjs.org/stylehacks/-/stylehacks-6.0.0.tgz"
@@ -6647,10 +6811,15 @@ tsconfig-paths@^3.14.2:
     minimist "^1.2.6"
     strip-bom "^3.0.0"
 
-tslib@^2.5.0, tslib@^2.6.0:
+tslib@^2.3.1, tslib@^2.5.0, tslib@^2.6.0:
   version "2.6.2"
   resolved "https://registry.npmjs.org/tslib/-/tslib-2.6.2.tgz"
   integrity sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==
+
+tslib@2.4.0:
+  version "2.4.0"
+  resolved "https://registry.npmjs.org/tslib/-/tslib-2.4.0.tgz"
+  integrity sha512-d6xOpEDfsi2CZVlPQzGeux8XMwLT9hssAsaPYExaQMuYskwb+x1x7J371tWlbBdWHroy99KnVB6qIkUbs5X3UQ==
 
 tsparticles-basic@^2.12.0:
   version "2.12.0"
@@ -7424,6 +7593,11 @@ vue-bundle-renderer@^2.0.0:
   dependencies:
     ufo "^1.2.0"
 
+vue-demi@>=0.14.6:
+  version "0.14.6"
+  resolved "https://registry.npmjs.org/vue-demi/-/vue-demi-0.14.6.tgz"
+  integrity sha512-8QA7wrYSHKaYgUxDA5ZC24w+eHm3sYCbp0EzcDwKqN3p6HqtTCGR/GVsPyZW92unff4UlcSh++lmqDWN3ZIq4w==
+
 vue-devtools-stub@^0.1.0:
   version "0.1.0"
   resolved "https://registry.npmjs.org/vue-devtools-stub/-/vue-devtools-stub-0.1.0.tgz"
@@ -7442,6 +7616,14 @@ vue-eslint-parser@^9.3.1:
     lodash "^4.17.21"
     semver "^7.3.6"
 
+vue-motion-one@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.npmjs.org/vue-motion-one/-/vue-motion-one-0.3.0.tgz"
+  integrity sha512-aSgdXHsbyWOF/HrpOyDmTqz5JRDeh0842hoOtjd3Ws3+UfjS3K94T7+LtDIeWVbE0jSRJi4tQ0OzQZ1GiEVEww==
+  dependencies:
+    motion "^10.14.2"
+    vue "^3.2.41"
+
 vue-router@^4.2.5:
   version "4.2.5"
   resolved "https://registry.npmjs.org/vue-router/-/vue-router-4.2.5.tgz"
@@ -7449,7 +7631,7 @@ vue-router@^4.2.5:
   dependencies:
     "@vue/devtools-api" "^6.5.0"
 
-vue@^3.3.8:
+vue@^3.2.41, vue@^3.3.8:
   version "3.3.8"
   resolved "https://registry.npmjs.org/vue/-/vue-3.3.8.tgz"
   integrity sha512-5VSX/3DabBikOXMsxzlW8JyfeLKlG9mzqnWgLQLty88vdZL7ZJgrdgBOmrArwxiLtmS+lNNpPcBYqrhE6TQW5w==

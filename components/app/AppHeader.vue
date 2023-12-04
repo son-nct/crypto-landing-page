@@ -40,8 +40,8 @@ header.relative.z-10
     section(class='bg-dark').p-8.w-full.mx-auto
         div.container.mx-auto
           div.flex.items-center
-              div(class='w-1/3')
-                  .px-2.flex.items-center
+              div(class='w-1/3 hidden lg:block')
+                  .px-2.flex.items-center.justify-between
                       ul.list-none.p-0.flex.w-full
                           li.inline-block.list-none.ml-7.text-white(v-for='(item,index) in navigator' :key='item')
                               NuxtLink(:to='item.to' v-if='index % 2 !== 0').text-lightGray {{ item.text }}
@@ -51,12 +51,12 @@ header.relative.z-10
                                 span.link__style
                                   | &nbsp;
                   
-              div(class='w-1/3').flex.justify-center.text-white
+              div(class='w-1/3 flex justify-start lg:justify-center items-center text-white')
                 img(src='~/assets/imgs/logo.svg' alt='Logo' width='207' height='32' class='w-10' loading='lazy')
 
-              div(class='w-1/3').flex.justify-end
+              div(class='w-2/3 lg:w-1/3').flex.justify-end
                 AtomsCustomButton(type='small' class='cursor-not-allowed') Login
-
+                
 </template>
 
 <style lang="scss" scoped>

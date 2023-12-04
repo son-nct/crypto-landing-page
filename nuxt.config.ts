@@ -46,6 +46,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     'nuxt-icon',
     'nuxt-delay-hydration',
+    '@vueuse/motion/nuxt',
+    '@vueuse/nuxt',
   ],
   particles: {
     mode: 'full',
