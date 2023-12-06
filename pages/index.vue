@@ -153,7 +153,7 @@ main
                                             img(src='~/assets/imgs/icons/asset3.svg' alt='asset 3' width='35' height='35' loading='lazy' class='transform-center')
                                         h5.uppercase.text-white.font-ultraBold DUAL TOKEN
                                         p.text-lightGray Allow token holders the freedom to invest future yields
-        section(class='h-[780px]').bg-dark2.relative.overflow-hidden
+        section(class='h-[900px]').bg-dark2.relative.overflow-hidden
             .container(class='mx-auto p-8 lg:p-10 z-10')
                 .element-section
                     div(class='relative w-full h-fit rounded-3xl lg:py-20')
