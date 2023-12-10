@@ -153,28 +153,62 @@ main
                                             img(src='~/assets/imgs/icons/asset3.svg' alt='asset 3' width='35' height='35' loading='lazy' class='transform-center')
                                         h5.uppercase.text-white.font-ultraBold DUAL TOKEN
                                         p.text-lightGray Allow token holders the freedom to invest future yields
-        section(class='h-[750px]').bg-dark2.relative
+        //- section.h-fit.bg-dark2.overflow-hidden
+        //-     .container.mx-auto.px-8.py-20(class='lg:px-10')
+        //-         .flex.flex-col.items-center.justify-center.gap-6.h-full
+        //-             .grid.grid-cols-1.gap-4.w-full(class='lg:grid-cols-2 lg:py-20')
+        //-                 .flex.flex-col.items-center.justify-center.pb-20(class='lg:items-start')
+        //-                     h2.uppercase.font-ultraBold.text-white(class='lg:text-6xl')
+        //-                         | Cross-Chain
+        //-                         br
+        //-                         |             Liquidity Staking
+        //-                         br
+        //-                         |             Derivative
+        //-                 // Image Column
+        //-                 div(class='relative bg-center bg-no-repeat bg-cover bg-blend-overlay').relative.flex.items-center.justify-center.px-8
+        //-                     img.absolute.transform.w-36(src='~/assets/imgs/icons/ellipse-right.svg' alt='ellipse' class='w-64 lg:w-80 mix-blend-soft-light'  width='460' height='620' loading='lazy')
+        //-                     img.absolute.transform.w-36(src='~/assets/imgs/icons/ellipse-left.svg' alt='ellipse' class='w-72 lg:w-96 mix-blend-soft-light'  width='460' height='620' loading='lazy')
+        //-                     div(class='absolute bg-center bg-no-repeat bg-cover bg-blend-overlay mix-blend-hard-light')
+        //-                         img(src='~/assets/imgs/icons/background-green.svg' alt='background' class='w-72 lg:w-96' loading='lazy')
+                        //-     // Crosschain Icons
+                        //-     img.w-16(src='~/assets/imgs/icons/crossChain1.svg' alt='crosschain icon' class='lg:w-32' loading='lazy')
+                        //-     img.w-12(src='~/assets/imgs/icons/crossChain2.svg' alt='crosschain icon' class='lg:w-24' loading='lazy')
+                        //-     img.w-16(src='~/assets/imgs/icons/crossChain3.svg' alt='crosschain icon' class='lg:w-32' loading='lazy')
+                        //-     img.w-12(src='~/assets/imgs/icons/crossChain4.svg' alt='crosschain icon' class='lg:w-24' loading='lazy')
+
+        section.bg-dark2
             .container(class='mx-auto p-8 lg:p-10 z-10')
                 .element-section
-                    div(class='relative w-full h-fit rounded-3xl lg:py-20')
+                    div(class='relative w-full h-full rounded-3xl lg:py-20')
                         .flex.flex-col.items-center.justify-center.gap-6.w-full
                             div(class='grid grid-cols-1 lg:grid-cols-2 gap-4 w-full')
                                 div(class='lg:p-8').col-1.flex.flex-col.items-start.justify-center.w-full.h-full
                                     h2.uppercase.font-ultraBold.text-white
                                         | Cross-Chain
                                         | liquidity staking derivative
-                                div.col-1.flex.flex-col.items-start.justify-center.w-full.h-full.p-8.relative
-                                    div(class='absolute top-60 md:top-72 lg:top-1/2 left-0 right-0 bottom-0 bg-center bg-no-repeat bg-cover bg-blend-overlay mix-blend-soft-light')
-                                        img(src='~/assets/imgs/icons/ellipse-right.svg' alt='ellipse' width='460' height='620' loading='lazy' class='transform-center w-96 md:w-[460px] lg:w-[460px]').transform-center
-                                        img(src='~/assets/imgs/icons/ellipse-left.svg' alt='ellipse' width='580' height='620' loading='lazy' class='transform-center w-96 md:w-[460px]  lg:w-[520px]').transform-center
-                                    div(class='top-56 md:top-72 lg:top-0').absolute.inset-0.bg-center.bg-no-repeat.bg-cover.bg-blend-overlay.mix-blend-hard-light
-                                        img(src='~/assets/imgs/icons/background-green.svg' alt='ellipse' width='470' height='620' loading='lazy' class='transform-center').transform-center
-                                    .absolute.top-0.left-0.bg-center.bg-no-repeat.bg-cover.bg-blend-overlay.mix-blend-hard-light.z-10
-                                            //- p.text-white.absolute.top-32.left-20 {{ 123 }}
-                                            img(src='~/assets/imgs/icons/crossChain1.svg' alt='crosschain icon' width='120' height='120' loading='lazy' class='relative top-32 left-10 w-24 lg:top-6 lg:left-40 lg:w-32')
-                                            img(src='~/assets/imgs/icons/crossChain2.svg' alt='crosschain icon' width='100' height='100' loading='lazy' class='relative top-8 left-44 w-20 lg:-top-32 lg:left-96 lg:w-24')
-                                            img(src='~/assets/imgs/icons/crossChain3.svg' alt='crosschain icon' width='120' height='120' loading='lazy'  class='relative w-24 left-48 top-16 lg:left-[25rem] lg:-top-8 lg:w-32')
-                                            img(src='~/assets/imgs/icons/crossChain4.svg' alt='crosschain icon' width='100' height='100' loading='lazy'  class='relative w-20 left-16 top-0 lg:left-52 lg:-top-32 lg:w-24')
+                                div(class='lg:p-8').col-1.flex.flex-col.items-start.justify-center.w-full.h-full
+                                    div(class='relative min-h-[600px] lg:min-h-fit w-full h-full z-50')
+                                        div(class='absolute transform-center inset-0 bg-center bg-no-repeat bg-cover bg-blend-overlay mix-blend-soft-light')
+                                            img(src='~/assets/imgs/icons/ellipse-right.svg' alt='ellipse' width='460' height='620' loading='lazy' class='transform-center w-96 md:w-[460px] lg:w-[460px]')
+                                            img(src='~/assets/imgs/icons/ellipse-left.svg' alt='ellipse' width='580' height='620' loading='lazy' class='transform-center w-96 md:w-[460px]  lg:w-[520px]').transform-center
+                                        //- div(class='top-56 md:top-72 lg:top-0').absolute.inset-0.bg-center.bg-no-repeat.bg-cover.bg-blend-overlay.mix-blend-hard-light
+                                        //-     img(src='~/assets/imgs/icons/background-green.svg' alt='ellipse' width='470' height='620' loading='lazy' class='transform-center').transform-center
+                                        //- .absolute.top-0.left-0.bg-center.bg-no-repeat.bg-cover.bg-blend-overlay.mix-blend-hard-light.z-10
+                                        //-         img(src='~/assets/imgs/icons/crossChain1.svg' alt='crosschain icon' width='120' height='120' loading='lazy' class='relative top-32 left-10 w-24 lg:top-6 lg:left-40 lg:w-32')
+                                        //-         img(src='~/assets/imgs/icons/crossChain2.svg' alt='crosschain icon' width='100' height='100' loading='lazy' class='relative top-8 left-44 w-20 lg:-top-32 lg:left-96 lg:w-24')
+                                        //-         img(src='~/assets/imgs/icons/crossChain3.svg' alt='crosschain icon' width='120' height='120' loading='lazy'  class='relative w-24 left-48 top-16 lg:left-[25rem] lg:-top-8 lg:w-32')
+                                        //-         img(src='~/assets/imgs/icons/crossChain4.svg' alt='crosschain icon' width='100' height='100' loading='lazy'  class='relative w-20 left-16 top-0 lg:left-52 lg:-top-32 lg:w-24')
+                                //- div(class='h-[600px] lg:h-0').col-1.flex.flex-col.items-start.justify-center.w-full.h-full.p-8.relative
+                                //-     div(class='absolute top-60 md:top-72 lg:top-1/2 left-0 right-0 bottom-0 bg-center bg-no-repeat bg-cover bg-blend-overlay mix-blend-soft-light')
+                                //-         img(src='~/assets/imgs/icons/ellipse-right.svg' alt='ellipse' width='460' height='620' loading='lazy' class='transform-center w-96 md:w-[460px] lg:w-[460px]').transform-center
+                                //-         img(src='~/assets/imgs/icons/ellipse-left.svg' alt='ellipse' width='580' height='620' loading='lazy' class='transform-center w-96 md:w-[460px]  lg:w-[520px]').transform-center
+                                //-     div(class='top-56 md:top-72 lg:top-0').absolute.inset-0.bg-center.bg-no-repeat.bg-cover.bg-blend-overlay.mix-blend-hard-light
+                                //-         img(src='~/assets/imgs/icons/background-green.svg' alt='ellipse' width='470' height='620' loading='lazy' class='transform-center').transform-center
+                                //-     .absolute.top-0.left-0.bg-center.bg-no-repeat.bg-cover.bg-blend-overlay.mix-blend-hard-light.z-10
+                                //-             img(src='~/assets/imgs/icons/crossChain1.svg' alt='crosschain icon' width='120' height='120' loading='lazy' class='relative top-32 left-10 w-24 lg:top-6 lg:left-40 lg:w-32')
+                                //-             img(src='~/assets/imgs/icons/crossChain2.svg' alt='crosschain icon' width='100' height='100' loading='lazy' class='relative top-8 left-44 w-20 lg:-top-32 lg:left-96 lg:w-24')
+                                //-             img(src='~/assets/imgs/icons/crossChain3.svg' alt='crosschain icon' width='120' height='120' loading='lazy'  class='relative w-24 left-48 top-16 lg:left-[25rem] lg:-top-8 lg:w-32')
+                                //-             img(src='~/assets/imgs/icons/crossChain4.svg' alt='crosschain icon' width='100' height='100' loading='lazy'  class='relative w-20 left-16 top-0 lg:left-52 lg:-top-32 lg:w-24')
         section.bg-primary.relative.overflow-hidden 
             div(class='p-6 lg:p-10').container.mx-auto.z-10
                 .element-section
