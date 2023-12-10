@@ -187,17 +187,16 @@ main
                                         | Cross-Chain
                                         | liquidity staking derivative
                                 div(class='lg:p-8').col-1.flex.flex-col.items-start.justify-center.w-full.h-full
-                                    div(class='relative min-h-[600px] lg:min-h-fit w-full h-full z-50')
-                                        div(class='absolute transform-center inset-0 bg-center bg-no-repeat bg-cover bg-blend-overlay mix-blend-soft-light')
-                                            img(src='~/assets/imgs/icons/ellipse-right.svg' alt='ellipse' width='460' height='620' loading='lazy' class='transform-center w-96 md:w-[460px] lg:w-[460px]')
-                                            img(src='~/assets/imgs/icons/ellipse-left.svg' alt='ellipse' width='580' height='620' loading='lazy' class='transform-center w-96 md:w-[460px]  lg:w-[520px]').transform-center
-                                        //- div(class='top-56 md:top-72 lg:top-0').absolute.inset-0.bg-center.bg-no-repeat.bg-cover.bg-blend-overlay.mix-blend-hard-light
-                                        //-     img(src='~/assets/imgs/icons/background-green.svg' alt='ellipse' width='470' height='620' loading='lazy' class='transform-center').transform-center
-                                        //- .absolute.top-0.left-0.bg-center.bg-no-repeat.bg-cover.bg-blend-overlay.mix-blend-hard-light.z-10
-                                        //-         img(src='~/assets/imgs/icons/crossChain1.svg' alt='crosschain icon' width='120' height='120' loading='lazy' class='relative top-32 left-10 w-24 lg:top-6 lg:left-40 lg:w-32')
-                                        //-         img(src='~/assets/imgs/icons/crossChain2.svg' alt='crosschain icon' width='100' height='100' loading='lazy' class='relative top-8 left-44 w-20 lg:-top-32 lg:left-96 lg:w-24')
-                                        //-         img(src='~/assets/imgs/icons/crossChain3.svg' alt='crosschain icon' width='120' height='120' loading='lazy'  class='relative w-24 left-48 top-16 lg:left-[25rem] lg:-top-8 lg:w-32')
-                                        //-         img(src='~/assets/imgs/icons/crossChain4.svg' alt='crosschain icon' width='100' height='100' loading='lazy'  class='relative w-20 left-16 top-0 lg:left-52 lg:-top-32 lg:w-24')
+                                    div(class='relative min-h-[600px] lg:min-h-fit w-full h-full z-50 inset-0 bg-center bg-no-repeat bg-cover bg-blend-overlay mix-blend-soft-light')
+                                        img(src='~/assets/imgs/icons/ellipse-right.svg' alt='ellipse' width='460' height='620' loading='lazy' class='transform-center')
+                                        img(src='~/assets/imgs/icons/ellipse-left.svg' alt='ellipse' width='580' height='620' loading='lazy' class='transform-center').transform-center
+                                    div(class='top-44').absolute.inset-0.bg-center.bg-no-repeat.bg-cover.bg-blend-overlay.mix-blend-hard-light
+                                        img(src='~/assets/imgs/icons/background-green.svg' alt='ellipse' width='470' height='620' loading='lazy' class='transform-center').transform-center
+                                        .absolute.top-0.left-0.bg-center.bg-no-repeat.bg-cover.bg-blend-overlay.mix-blend-hard-light.z-10
+                                                img(src='~/assets/imgs/icons/crossChain1.svg' alt='crosschain icon' width='120' height='120' loading='lazy' class='relative top-32 left-10 w-24 lg:top-6 lg:left-40 lg:w-32')
+                                                img(src='~/assets/imgs/icons/crossChain2.svg' alt='crosschain icon' width='100' height='100' loading='lazy' class='relative top-8 left-44 w-20 lg:-top-32 lg:left-96 lg:w-24')
+                                                img(src='~/assets/imgs/icons/crossChain3.svg' alt='crosschain icon' width='120' height='120' loading='lazy'  class='relative w-24 left-48 top-16 lg:left-[25rem] lg:-top-8 lg:w-32')
+                                                img(src='~/assets/imgs/icons/crossChain4.svg' alt='crosschain icon' width='100' height='100' loading='lazy'  class='relative w-20 left-16 top-0 lg:left-52 lg:-top-32 lg:w-24')
                                 //- div(class='h-[600px] lg:h-0').col-1.flex.flex-col.items-start.justify-center.w-full.h-full.p-8.relative
                                 //-     div(class='absolute top-60 md:top-72 lg:top-1/2 left-0 right-0 bottom-0 bg-center bg-no-repeat bg-cover bg-blend-overlay mix-blend-soft-light')
                                 //-         img(src='~/assets/imgs/icons/ellipse-right.svg' alt='ellipse' width='460' height='620' loading='lazy' class='transform-center w-96 md:w-[460px] lg:w-[460px]').transform-center
