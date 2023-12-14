@@ -43,9 +43,28 @@ function init(THREE) {
 
   scene = new THREE.Scene();
 
-  const material = new THREE.PointsMaterial({
+  // Create a canvas element to draw a circle
+  const canvas = document.createElement('canvas');
+  canvas.width = 512; // Increase canvas size for a bigger circle
+  canvas.height = 512;
+  const context = canvas.getContext('2d');
+
+  // Draw a white circle in the canvas
+  const center = 256; // As the canvas is 256x256, the center is at 128,128
+  const radius = 200; // Increase the radius of the circle
+  context.beginPath();
+  context.arc(center, center, radius, 0, Math.PI * 2, true);
+  context.fillStyle = 'white';
+  context.fill();
+
+  // Use the canvas as a texture
+  const texture = new THREE.Texture(canvas);
+  texture.needsUpdate = true; // Update the texture with the canvas content
+
+  const material = new THREE.SpriteMaterial({
+    map: texture,
     color: 0xcbfb45,
-    size: 3,
+    // size: 3
   });
 
   for (let ix = 0; ix < AMOUNTX; ix++) {
@@ -60,10 +79,8 @@ function init(THREE) {
 
   renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setPixelRatio(window.devicePixelRatio);
-  // renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setClearColor(0x171616); // Set the background color
-  renderer.setSize(window.innerWidth, window.innerHeight);
   container.value.appendChild(renderer.domElement);
 }
 
@@ -134,6 +151,6 @@ function render() {
 
 <style scoped>
 #particalWave {
-  @apply h-[800px] relative;
+  @apply h-fit relative;
 }
 </style>
