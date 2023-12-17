@@ -295,7 +295,6 @@ main
                                 .flex.flex-col.ml-2.items-start.-translate-y-1
                                     p.text-sm.text-gray.uppercase.translate-y-1 DOWNLOAD ON THE
                                     h5.text-medium.font-description.font-bold App Store
-
                                     
 </template>
 

@@ -45,79 +45,13 @@ const toggleActive = (value: Accordition) => {
     const findIndex = accorditionList.value.findIndex(item => item.id === id)
     accorditionList.value[findIndex].isOpen = isOpen
 }
-const imageRef = ref(null)
-const glass = ref(null)
 
-const magnify = (img: any, zoom: number) => {
-    let w, h, bw
-
-    // Create magnifier glass:
-    const glassElement = document.createElement("div")
-    glassElement.setAttribute("class", "img-magnifier-glass")
-    img.parentElement.insertBefore(glassElement, img)
-    glass.value = glassElement
-
-    // Set background properties for the magnifier glass:
-    glassElement.style.backgroundImage = "url('" + img.src + "')"
-    console.log('glassElement.style.backgroundImage: ', glassElement.style.backgroundImage)
-    glassElement.style.backgroundRepeat = "no-repeat"
-    glassElement.style.backgroundSize = img.width * zoom + "px " + img.height * zoom + "px"
-    bw = 3
-    w = glassElement.offsetWidth / 2
-    h = glassElement.offsetHeight / 2
-
-    const getCursorPos = (e: Event, img: any) => {
-        let a, x = 0, y = 0;
-        e = e || window.event;
-        a = img.getBoundingClientRect();
-        x = e.pageX - a.left;
-        y = e.pageY - a.top;
-        x = x - window.scrollX;
-        y = y - window.scrollY;
-        return { x, y };
-    }
-
-    // Event listeners for mouse movement:
-    const moveMagnifier = (e: Event) => {
-        e.preventDefault();
-        const pos = getCursorPos(e, img);
-        let x = pos.x;
-        let y = pos.y;
-
-        if (x > img.width - (w / zoom)) x = img.width - (w / zoom)
-        if (x < w / zoom) x = w / zoom
-        if (y > img.height - (h / zoom)) y = img.height - (h / zoom)
-        if (y < h / zoom) y = h / zoom
-
-        glassElement.style.left = (x - w) + "px"
-        glassElement.style.top = (y - h) + "px"
-        glassElement.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px"
-    }
-
-    glass.value.addEventListener("mousemove", moveMagnifier)
-    img.addEventListener("mousemove", moveMagnifier);
-
-    glassElement.addEventListener("mousemove", moveMagnifier)
-    img.addEventListener("mousemove", moveMagnifier)
-    glassElement.addEventListener("touchmove", moveMagnifier)
-    img.addEventListener("touchmove", moveMagnifier)
-
-
-
-    onUnmounted(() => {
-        glassElement.removeEventListener("mousemove", moveMagnifier);
-        img.removeEventListener("mousemove", moveMagnifier);
-        glassElement.removeEventListener("touchmove", moveMagnifier);
-        img.removeEventListener("touchmove", moveMagnifier);
-    })
+const showModalImage = ref(false)
+const toggleModalImage = () => {
+    showModalImage.value = !showModalImage.value 
 }
-onMounted(() => {
-    if (imageRef.value) {
-        magnify(imageRef.value, 3);
-    }
-})
 
-
+provide('closeModal', showModalImage)
 </script>
 
 <template lang="pug">
@@ -177,10 +111,11 @@ main
                     div(class='relative w-full h-fit rounded-3xl')
                         .flex.flex-col.items-center.justify-center.gap-10.w-full
                             h2.uppercase.font-ultraBold.text-white
-                                | FLOW PRODUCT
+                                | FLOW PRODUCT {{ showModalImage }}
                             div(class='min-h-[600px]')
-                                ClientOnly
-                                    VueMagnifier(:src='FlowProductImg' class='w-full')
+                                div(class='w-full h-full' @click='toggleModalImage')
+                                    ClientOnly
+                                        VueMagnifier(:src='FlowProductImg' class='w-full' @close='toggleModalImage')
         section.bg-primary.relative.overflow-hidden
             .container.mx-auto.z-10.p-10
                 .element-section
@@ -231,7 +166,8 @@ main
                             div(class='w-2/3').border.border-dark.h-14
                                 input(type='text' class='placeholder:text-dark' placeholder="You email address...").w-full.h-full.p-4.outline-none.border-none.bg-transparent.text-dark
                             button(type='button').bg-dark.text-white.font-ultraBold.px-6.py-3.h-14.cursor-pointer Sign Up
-                                                                          
+        ClientOnly
+            AtomsModalImage(:showModal='showModalImage' :imageUrl='FlowProductImg')                                                                  
 </template>
 
 <style lang="scss" scoped>
