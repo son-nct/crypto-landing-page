@@ -131,6 +131,6 @@ slot
 
 <style lang="scss" scoped>
 #tsparticles {
-  @apply h-[450px] border-none outline-none lg:h-[800px] relative;
+  @apply h-[450px] border-none outline-none lg:h-[600px] xl:h-[700px] relative;
 }
 </style>

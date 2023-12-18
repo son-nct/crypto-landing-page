@@ -71,17 +71,19 @@ onMounted(() => {
 main
     article
         LazyMoleculesPartical
-            .absolute(class='top-[50%] lg:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2')
-                .container.mx-auto
+            .container.mx-auto
+                .absolute(class='w-full px-10 top-1/4 lg:top-1/3 xl:top-1/2 left-1/2 -translate-x-1/2 lg:-translate-y-1/2')
                     .element-section
                         .flex.flex-col.items-center.justify-center.gap-8
                             h2(
                                 v-motion
                                 :initial='initialLeft'
                                 :visible='enter'
-                            ).uppercase.font-ultraBold.text-primary
+                                class='text-5xl'
+                            ).uppercase.font-ultraBold.text-primary.text-center
                                 | YIELDS
-                                span.text-white.mx-4 ON
+                                span.text-white(class='mx-2 md:mx-4') ON
+                                br(class='md:hidden')
                                 | YIELDS
                             p(
                                 v-motion

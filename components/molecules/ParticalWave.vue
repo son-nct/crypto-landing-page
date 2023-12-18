@@ -1,6 +1,6 @@
 <template lang="pug">
 #particalWave(ref='container')
-slot
+  slot
 </template>
 
 <script setup>
@@ -79,7 +79,14 @@ function init(THREE) {
 
   renderer = new THREE.WebGLRenderer({ antialias: true });
   renderer.setPixelRatio(window.devicePixelRatio);
-  renderer.setSize(window.innerWidth, window.innerHeight);
+  // renderer.setSize(window.innerWidth, window.innerHeight);
+  if (window.innerWidth <= 768) {
+    // For small devices, set a fixed height (e.g., 1200px)
+    renderer.setSize(container.value.clientWidth, 1200);
+  } else {
+    // For large devices, use the full window height
+    renderer.setSize(container.value.clientWidth, window.innerHeight);
+  }
   renderer.setClearColor(0x171616); // Set the background color
   container.value.appendChild(renderer.domElement);
 }

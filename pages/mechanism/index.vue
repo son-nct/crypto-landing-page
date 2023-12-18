@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import FlowProductImg from '~/assets/imgs/flow-product.svg'
+import FlowProductMobile from '~/assets/imgs/flow-product-mobile.svg'
 import type { Accordition } from '~/types/accordition'
 const carouselSlides = [
     {
@@ -58,12 +59,12 @@ provide('closeModal', showModalImage)
 main
     article
         ClientOnly
-            LazyMoleculesParticalWave
-                .absolute(class='top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2')
-                    .container.mx-auto
+            MoleculesParticalWave
+                .container.mx-auto
+                    .absolute(class='w-full px-10 top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2')
                         .element-section
-                            .flex.flex-col.items-center.justify-center.gap-8.text-center
-                                h2.uppercase.font-ultraBold.text-white.text-center
+                            .flex.flex-col.w-full.items-center.justify-center.gap-8.text-center
+                                h2.uppercase.font-ultraBold.text-white.text-center(class='text-5xl')
                                     | Experience venture investing 
                                     | NO RISK
                                 p.text-center.text-lightGray
@@ -74,70 +75,79 @@ main
                                     | profit for longterm crypto supporters —so users can access to high return
                                     br
                                     | investment with NO RISK to current holding digital assets.
+                                div(class='grid gap-6 lg:gap-32 grid-cols-1 md:grid-cols-3')
+                                    div(class='w-[300px] h-[160px] bg-cardNeutral/90 flex flex-col items-center justify-center rounded-md p-6')
+                                        p.text-whiteCustom LSD Under Management
+                                    div(class='lg:translate-y-20 w-[300px] h-[160px] bg-cardNeutral/90 flex flex-col items-center justify-center rounded-md p-6')
+                                        p.text-whiteCustom Assets Under Management
+                                    div(class='w-[300px] h-[160px] bg-cardNeutral/90 flex flex-col items-center justify-center rounded-md p-6')
+                                        p.text-whiteCustom Percentage Profit From Investing
         section.bg-primary.relative.overflow-hidden
             .container.mx-auto.p-10.z-10
-                .element-section
-                    div(class='relative w-full h-fit rounded-3xl').py-10
+                div(class='relative w-full h-fit rounded-3xl lg:py-10')
+                    .element-section
                         .flex.flex-col.items-center.justify-center.gap-6.w-full
                             div(class='grid grid-cols-1 lg:grid-cols-2 gap-4 w-full')
                                 div.col-1.flex.flex-col.gap-4.items-start.justify-center.w-full.h-full
-                                    h2.uppercase.font-ultraBold.text-black
+                                    h2.uppercase.font-ultraBold.text-black(class='text-xl lg:text-5xl')
                                         | Fundamentals-driven.
                                         br
-                                        | Data-backed.
+                                        |DATA-BACKED.
                                         br
-                                        | For-Profit.
+                                        |FOR-PROFIT.
                                     .flex.flex-col.items-start.gap-4
-                                        p.text-base.text-neutral.pr-14
+                                        p.text-base.text-neutral(class='lg:pr-14')
                                             | YxY’s investment ticket size from $50K-$2M from the
                                             | protocol yield pool that was decided by ytToken owner, to
                                             | drive successful web3 startup growth worldwide, for the greater good of the market and for profit too.
-                                        p.text-base.text-neutral.pr-14
+                                        p.text-base.text-neutral(class='lg:pr-14')
                                             | Why? Because we are the underdog both in investors and
                                             | builders' perspective. Web3 projects with huge potential are
                                             | difficult to raise funds if they are not well-connected. On the other hand,
                                             | retail investors rarely have opportunities to invest into high quality projects from an early stage and
                                             | having too little capital to risk it all. We are here to disrupt it.
-                                        p.text-base.text-neutral.pr-14
+                                        p.text-base.text-neutral(class='lg:pr-14')
                                             | Invest in potential projects with risk-free tokenized yield
                                             | from your current assets, safely hold your assets for profit,
                                             | while unlocking the promise of potential high return venture investment.
                                 div.col-1.flex.flex-col.items-start.justify-center.w-full.h-full.relative
-                                    .absolute.inset-0.-top-14.bg-center.bg-no-repeat.bg-cover.w-full
-                                        img(src='~/assets/imgs/mechanism1.svg' alt='ellipse' width='550' height='572' loading='lazy' class='transform-center').transform-center
+                                    div
+                                        img(src='~/assets/imgs/mechanism1.svg' alt='ellipse' width='550' height='572' loading='lazy' class='lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2')
         section.bg-dark2.relative.overflow-hidden
             .container.mx-auto.p-10.z-10
                 .element-section
                     div(class='relative w-full h-fit rounded-3xl')
                         .flex.flex-col.items-center.justify-center.gap-10.w-full
                             h2.uppercase.font-ultraBold.text-white
-                                | FLOW PRODUCT {{ showModalImage }}
+                                | FLOW PRODUCT
                             div(class='min-h-[600px]')
                                 div(class='w-full h-full' @click='toggleModalImage')
+                                    img(:src='FlowProductMobile' alt='ellipse' width='550' height='572' loading='lazy' class='h-96 scale-125 my-20 lg:hidden')
                                     ClientOnly
-                                        VueMagnifier(:src='FlowProductImg' class='w-full' @close='toggleModalImage')
+                                        VueMagnifier(:src='FlowProductImg' class='hidden lg:block w-full' @close='toggleModalImage')
+                                AtomsCustomButton(type='outline-green' class='block lg:hidden mt-20') View
         section.bg-primary.relative.overflow-hidden
             .container.mx-auto.z-10.p-10
                 .element-section
                     div(class='relative w-full h-fit rounded-3xl').flex.flex-col.items-center.justify-center.gap-4.w-full
-                        h2.uppercase.font-ultraBold.text-BLACK
+                        h2.uppercase.font-ultraBold.text-black.text-center
                             | Put your yield to work
-                        p(class='w-1/2').text-base.text-neutral.text-center
+                        p(class='w-full lg:w-1/2').text-base.text-neutral.text-center
                             | Your limited yield will be maximized into unlimited potential on YxY.
                             | Use the LSD mechanism to tokenize your yield to invest risk-free into a high|
                             | return web3 startup.
                         div.relative.w-full.mt-20
                             .slick-list
-                                .slick-track
+                                .slick-track-column
                                     .slick-slide-2(v-for='item in carouselSlides' :key='item')
                                         div(class='h-1/2')
                                             .w-full.h-full.inline-block.float-none
                                                 .h-full.flex.relative
-                                                    .flex-1.flex-col.gap-2.relative.left-8.h-full
+                                                    div(class='left-0 lg:left-8').flex-1.flex-col.gap-2.relative.h-full
                                                         h5.uppercase.text-black.font-ultraBold {{ item.title }}
-                                                        .absolute.top-14.-left-1.icon-check-wrapper
+                                                        div(class='top-8 lg:top-14').absolute.-left-1.icon-check-wrapper
                                                             Icon(name="lets-icons:check-fill" color="black" size='2rem')
-                                                            .strikethrough
+                                                            .strikethrough(class='hidden lg:block')
                                                         .line_dash_2
                                                         div(class='w-1/2').flex-1.flex-col.gap-2.relative.left-8.top-14.h-full
                                                             p.text-base.text-neutral.content.pt-2
@@ -145,11 +155,11 @@ main
         section.bg-dark2.relative.overflow-hidden
             .container.mx-auto.p-10.z-10
                 .element-section
-                    div(class='relative w-full h-fit rounded-3xl').py-10
+                    div(class='relative w-full h-fit rounded-3xl lg:py-10')
                         .flex.flex-col.items-center.justify-center.gap-6.w-full
                             div(class='grid grid-cols-1 lg:grid-cols-2 gap-4 w-full')
-                                div.col-1.flex.flex-col.gap-4.items-start.justify-start.w-full.h-full
-                                    h2.uppercase.font-ultraBold.text-white.pt-8
+                                div(class='items-center lg:items-start').col-1.flex.flex-col.gap-4.justify-start.w-full.h-full
+                                    h2.uppercase.font-ultraBold.text-white.pt-8(class='text-4xl')
                                         | FAQS.
                                 div.col-1.flex.flex-col.items-start.justify-center.w-full.h-full.relative
                                     MoleculesAccorditionList(:accordition-list="accorditionList" @toggle-active="toggleActive")
@@ -157,15 +167,15 @@ main
             .container.mx-auto.p-10.z-10.bg-pattern2.bg-center.bg-no-repeat.bg-cover.relative.overflow-hidden
                 .element-section
                     div(class='relative w-full h-fit rounded-3xl').flex.flex-col.items-center.justify-center.gap-6.w-full
-                        h2(class='w-2/3').uppercase.font-ultraBold.text-BLACK.text-center
+                        h2(class='w-full lg:w-2/3').uppercase.font-ultraBold.text-BLACK.text-center
                             | EARLY BIRDS
                             br
                             | GET THE ALPHA
                         h5.text-neutral.text-xl Sign up for Waitlist
-                        div(class='w-1/2').flex.items-center
-                            div(class='w-2/3').border.border-dark.h-14
+                        div(class='w-full lg:w-1/2 flex flex-col lg:flex-row items-center')
+                            div(class='w-full lg:w-2/3').border.border-dark.h-14
                                 input(type='text' class='placeholder:text-dark' placeholder="You email address...").w-full.h-full.p-4.outline-none.border-none.bg-transparent.text-dark
-                            button(type='button').bg-dark.text-white.font-ultraBold.px-6.py-3.h-14.cursor-pointer Sign Up
+                            button(type='button' class='w-full lg:w-fit mt-4 lg:mt-0').bg-dark.text-white.font-ultraBold.px-6.py-3.h-14.cursor-pointer Sign Up
         ClientOnly
             AtomsModalImage(:showModal='showModalImage' :imageUrl='FlowProductImg')                                                                  
 </template>

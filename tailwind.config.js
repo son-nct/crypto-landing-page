@@ -28,7 +28,9 @@ export default {
         dark2: '#111111',
         neutral: '#5D5D5D',
         neutralPink: '#BFBFBF',
-        bgModal : '#525352' 
+        bgModal : '#525352',
+        cardNeutral: '#454545',
+        whiteCustom: '#f0f0f0'
       },
       backgroundImage: {
         pattern: `url('/assets/imgs/home2.webp')`,

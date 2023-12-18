@@ -5,11 +5,10 @@
             span(class='-mt-1')  &times;
         .w-full.flex.items-center.justify-center 
             .w-32.h-10.bg-card.flex.items-center.justify-center
-                img(src='~/assets/imgs/icons/magnify-plus.svg' width="32" height="32" alt='homepage' class="mr-4 cursor-pointer" loading='lazy' @click='toggleZoom')
-                img(src='~/assets/imgs/icons/magnify-minus.svg' width="32" height="32" alt='homepage' class="cursor-pointer" loading='lazy')
+                img(src='~/assets/imgs/icons/magnify-plus.svg' width="32" height="32" alt='homepage' class="mr-4 cursor-pointer" loading='lazy' @click='isZoomed = true')
+                img(src='~/assets/imgs/icons/magnify-minus.svg' width="32" height="32" alt='homepage' class="cursor-pointer" loading='lazy' @click='resetZoom')
         .img-container(:class="{ 'zoomed': isZoomed }")
             img(ref='imgZoom', :src='imageUrl', alt='Popup Image', :style="imgStyle", @mousedown="startDrag", @mousemove="isDragging", @mouseup="endDrag", @mouseleave="endDrag")
-            button.zoom-button(@click='toggleZoom') Zoom {{ isZoomed ? 'Out' : 'In' }}
            
 </template>
       
@@ -30,6 +29,12 @@ const isZoomed = ref(false);
 const dragging = ref(false);
 const position = ref({ x: 0, y: 0, startX: 0, startY: 0 });
 const zoomScale = 1.5;
+
+
+const resetZoom = () => {
+    isZoomed.value = false
+    resetDragState()
+}
 
 const closeModal = () => {
     showModalImage.value = false
@@ -111,7 +116,7 @@ watch(() => props.showModal, (newValue) => {
 <style lang="scss">
 .modal {
     @apply fixed inset-0 flex items-center justify-center bg-black/40;
-    z-index: 50; // Ensure this is higher than other page content
+    z-index: 50;
 
     .modal-content {
         @apply mx-auto px-6 py-10 bg-bgModal/80 shadow-lg rounded-lg relative;
@@ -143,7 +148,6 @@ watch(() => props.showModal, (newValue) => {
 
         .close {
             @apply text-3xl font-bold cursor-pointer absolute top-4 right-4;
-            // Removed redundant properties already covered by @apply
         }
     }
 }
