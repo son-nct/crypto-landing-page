@@ -1,13 +1,13 @@
 <script setup lang="ts">
-// const head = useHead({
-//   script: [
-//     {
-//       hid: 'stripe',
-//       src: 'https://cryptorank.io/widget/marquee.js',
-//       defer: true,
-//     },
-//   ],
-// })
+const head = useHead({
+  script: [
+    {
+      hid: 'stripe',
+      src: 'https://cryptorank.io/widget/marquee.js',
+      defer: true,
+    },
+  ],
+})
 
 const navigator = [
   {
@@ -27,8 +27,8 @@ const navigator = [
     to: '/portfolio',
   },
   {
-    text: 'Contact',
-    to: '/contact',
+    text: 'About',
+    to: '/about',
   },
 ]
 </script>

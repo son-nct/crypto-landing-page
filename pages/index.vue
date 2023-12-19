@@ -1,76 +1,76 @@
 <script setup lang="ts">
-const { getAnimationConfig} = useAnimateConfig()
+const { getAnimationConfig } = useAnimateConfig()
 const { initialLeft, initialRight, enter } = getAnimationConfig()
 import { useScroll } from '@vueuse/core'
 const backgroundStyle = ref({
-    background:
-        'radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 21.35%, rgba(203, 251, 69, 0.08) 100%)'
+  background:
+    'radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0) 21.35%, rgba(203, 251, 69, 0.08) 100%)',
 })
 
 const carouselSlides = [
-    {
-        upperHalf: {
-            title: 'Project Idea',
-            date: 'Q2 2021',
-            content:
-                "The project's idea was created during the market boom with the goal of how retail investors could have a chance to compete with professional investors.",
-        },
-        lowerHalf: {
-            title: 'Finalized Model',
-            date: 'Q3 2022',
-            content:
-                'After various designs and adjusting the model to find the most suitable design for the market, with the development of LSD in The Merge - Ethereum events, the model has been finalized using the liquidity staking mechanism as the core of the model.',
-        },
+  {
+    upperHalf: {
+      title: 'Project Idea',
+      date: 'Q2 2021',
+      content:
+        "The project's idea was created during the market boom with the goal of how retail investors could have a chance to compete with professional investors.",
     },
-    {
-        upperHalf: {
-            title: 'Assemble Team',
-            date: 'Q1 2023',
-            content:
-                'We searched for people who are most passionate about the development of crypto to develop this product together.',
-        },
-        lowerHalf: {
-            title: 'Private Beta Launch',
-            date: 'H1 2024',
-            content:
-                'Released Beta Launch with selected first blockchain and limited early beta testers.',
-        },
+    lowerHalf: {
+      title: 'Finalized Model',
+      date: 'Q3 2022',
+      content:
+        'After various designs and adjusting the model to find the most suitable design for the market, with the development of LSD in The Merge - Ethereum events, the model has been finalized using the liquidity staking mechanism as the core of the model.',
     },
-    {
-        upperHalf: {
-            title: 'Public Beta Launch',
-            date: 'H3 2024',
-            content:
-                'Open Public Beta version for majority users, integrated two to four blockchains.',
-        },
+  },
+  {
+    upperHalf: {
+      title: 'Assemble Team',
+      date: 'Q1 2023',
+      content:
+        'We searched for people who are most passionate about the development of crypto to develop this product together.',
     },
+    lowerHalf: {
+      title: 'Private Beta Launch',
+      date: 'H1 2024',
+      content:
+        'Released Beta Launch with selected first blockchain and limited early beta testers.',
+    },
+  },
+  {
+    upperHalf: {
+      title: 'Public Beta Launch',
+      date: 'H3 2024',
+      content:
+        'Open Public Beta version for majority users, integrated two to four blockchains.',
+    },
+  },
 ]
 
 const indexActiveRoadMap = ref(0)
-const slideRefs  = ref([])
-const slickList  = ref(null)
+const slideRefs = ref([])
+const slickList = ref(null)
 const slideWidthRoadMap = ref(0)
 
 let { x } = useScroll(slickList, { behavior: 'smooth' })
 
 const setActiveBtnRoadMap = (index: number) => {
-    const offset = (index - indexActiveRoadMap.value) * slideWidthRoadMap.value
-    if(slickList.value) {
-        x.value += offset
-    }
+  const offset = (index - indexActiveRoadMap.value) * slideWidthRoadMap.value
+  if (slickList.value) {
+    x.value += offset
+  }
 
-    indexActiveRoadMap.value = index
+  indexActiveRoadMap.value = index
 }
 
 onMounted(() => {
-    slideWidthRoadMap.value = slideRefs.value[0]?.clientWidth
+  slideWidthRoadMap.value = slideRefs.value[0]?.clientWidth
 })
 </script>
 
 <template lang="pug">
 main
     article
-        LazyMoleculesPartical
+        MoleculesPartical
             .container.mx-auto
                 .absolute(class='w-full px-10 top-1/4 lg:top-1/3 xl:top-1/2 left-1/2 -translate-x-1/2 lg:-translate-y-1/2')
                     .element-section
@@ -302,12 +302,12 @@ main
 
 <style lang="scss" scoped>
 .roadmap-pagination {
-    .btn-pagination {
-        @apply w-4 h-1 bg-lightGray rounded-lg duration-300 ease-out cursor-pointer;
+  .btn-pagination {
+    @apply w-4 h-1 bg-lightGray rounded-lg duration-300 ease-out cursor-pointer;
 
-        &.active {
-            @apply w-8 h-1 bg-black #{!important};
-        }
+    &.active {
+      @apply w-8 h-1 bg-black #{!important};
     }
+  }
 }
 </style>

@@ -3,53 +3,56 @@ import FlowProductImg from '~/assets/imgs/flow-product.svg'
 import FlowProductMobile from '~/assets/imgs/flow-product-mobile.svg'
 import type { Accordition } from '~/types/accordition'
 const carouselSlides = [
-    {
-        title: 'Step 1',
-        content:
-            'Users Staking supported digital assets (ETH, Aleph Zero,...) and receive ptToken represent their current staked assets',
-    },
-    {
-        title: 'Step 2',
-        content:
-            'Hold their ptToken to receive ytToken represent for yield generated through their staked assets',
-    },
-    {
-        title: 'Step 3',
-        content:
-            'Invest in early stage projects using their ytToken and receive profit after vesting phase and exit is finished.',
-    },
+  {
+    title: 'Step 1',
+    content:
+      'Users Staking supported digital assets (ETH, Aleph Zero,...) and receive ptToken represent their current staked assets',
+  },
+  {
+    title: 'Step 2',
+    content:
+      'Hold their ptToken to receive ytToken represent for yield generated through their staked assets',
+  },
+  {
+    title: 'Step 3',
+    content:
+      'Invest in early stage projects using their ytToken and receive profit after vesting phase and exit is finished.',
+  },
 ]
 
 const accorditionList = ref([
-    {
-        id: 1,
-        title: 'What is LSD',
-        description: 'Pretium mauris viverra eget nulla eu auctor scelerisque risus. Ornare morbi pulvinar ipsum gravida rutrum. Aliquam aliquet ac vitae pellentesque lectus elementum. Nunc mus et, pulvinar facilisi viverra. At amet mauris fermentum sed. Aliquam ut rhoncus et semper non.',
-        isOpen: true
-    },
-    {
-        id: 2,
-        title: 'Why dual-token model ?',
-        description: 'Pretium mauris viverra eget nulla eu auctor scelerisque risus. Ornare morbi pulvinar ipsum gravida rutrum. Aliquam aliquet ac vitae pellentesque lectus elementum. Nunc mus et, pulvinar facilisi viverra. At amet mauris fermentum sed. Aliquam ut rhoncus et semper non.',
-        isOpen: false
-    },
-    {
-        id: 3,
-        title: 'How many assets are currently supported ?',
-        description: 'Pretium mauris viverra eget nulla eu auctor scelerisque risus. Ornare morbi pulvinar ipsum gravida rutrum. Aliquam aliquet ac vitae pellentesque lectus elementum. Nunc mus et, pulvinar facilisi viverra. At amet mauris fermentum sed. Aliquam ut rhoncus et semper non.',
-        isOpen: false
-    }
+  {
+    id: 1,
+    title: 'What is LSD',
+    description:
+      'Pretium mauris viverra eget nulla eu auctor scelerisque risus. Ornare morbi pulvinar ipsum gravida rutrum. Aliquam aliquet ac vitae pellentesque lectus elementum. Nunc mus et, pulvinar facilisi viverra. At amet mauris fermentum sed. Aliquam ut rhoncus et semper non.',
+    isOpen: true,
+  },
+  {
+    id: 2,
+    title: 'Why dual-token model ?',
+    description:
+      'Pretium mauris viverra eget nulla eu auctor scelerisque risus. Ornare morbi pulvinar ipsum gravida rutrum. Aliquam aliquet ac vitae pellentesque lectus elementum. Nunc mus et, pulvinar facilisi viverra. At amet mauris fermentum sed. Aliquam ut rhoncus et semper non.',
+    isOpen: false,
+  },
+  {
+    id: 3,
+    title: 'How many assets are currently supported ?',
+    description:
+      'Pretium mauris viverra eget nulla eu auctor scelerisque risus. Ornare morbi pulvinar ipsum gravida rutrum. Aliquam aliquet ac vitae pellentesque lectus elementum. Nunc mus et, pulvinar facilisi viverra. At amet mauris fermentum sed. Aliquam ut rhoncus et semper non.',
+    isOpen: false,
+  },
 ])
 
 const toggleActive = (value: Accordition) => {
-    const { id, isOpen } = value
-    const findIndex = accorditionList.value.findIndex(item => item.id === id)
-    accorditionList.value[findIndex].isOpen = isOpen
+  const { id, isOpen } = value
+  const findIndex = accorditionList.value.findIndex((item) => item.id === id)
+  accorditionList.value[findIndex].isOpen = isOpen
 }
 
 const showModalImage = ref(false)
 const toggleModalImage = () => {
-    showModalImage.value = !showModalImage.value 
+  showModalImage.value = !showModalImage.value
 }
 
 provide('closeModal', showModalImage)
@@ -182,27 +185,26 @@ main
 
 <style lang="scss" scoped>
 .icon-check-wrapper {
-    @apply relative inline-block w-full;
+  @apply relative inline-block w-full;
 }
 
 .img-magnifier-container {
-    @apply relative;
+  @apply relative;
 }
 
 .img-magnifier-glass {
-    position: absolute;
-    border: 3px solid #8a3033;
-    border-radius: 50%;
-    cursor: none;
-    /*Set the size of the magnifier glass:*/
-    width: 150px;
-    height: 150px;
+  position: absolute;
+  border: 3px solid #8a3033;
+  border-radius: 50%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 150px;
+  height: 150px;
 }
 
-
 .strikethrough {
-    @apply absolute w-full bg-transparent top-1/2 left-0;
-    border-top: 2px dashed;
-    border-color: gray;
+  @apply absolute w-full bg-transparent top-1/2 left-0;
+  border-top: 2px dashed;
+  border-color: gray;
 }
 </style>
