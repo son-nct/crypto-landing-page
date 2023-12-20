@@ -123,12 +123,12 @@ main
                         .flex.flex-col.items-center.justify-center.gap-10.w-full
                             h2.uppercase.font-ultraBold.text-white
                                 | FLOW PRODUCT
-                            div(class='min-h-[600px]')
+                            div(class='min-h-[400px]')
                                 div(class='w-full h-full' @click='toggleModalImage')
-                                    img(:src='FlowProductMobile' alt='ellipse' width='550' height='572' loading='lazy' class='h-96 scale-125 my-20 lg:hidden')
+                                    img(src='~/assets/imgs/flowProduct_mobile.png' alt='ellipse' width='550' height='572' loading='lazy' class='h-auto my-20 lg:hidden')
                                     ClientOnly
                                         VueMagnifier(:src='FlowProductImg' class='hidden lg:block w-full' @close='toggleModalImage')
-                                AtomsCustomButton(type='outline-green' class='block lg:hidden mt-20') View
+                                AtomsCustomButton(type='outline-green' class='block lg:hidden' @click='toggleModalImage') View
         section.bg-primary.relative.overflow-hidden
             .container.mx-auto.z-10.p-10
                 .element-section

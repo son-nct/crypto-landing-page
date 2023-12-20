@@ -8,7 +8,8 @@
                 img(src='~/assets/imgs/icons/magnify-plus.svg' width="32" height="32" alt='homepage' class="mr-4 cursor-pointer" loading='lazy' @click='isZoomed = true')
                 img(src='~/assets/imgs/icons/magnify-minus.svg' width="32" height="32" alt='homepage' class="cursor-pointer" loading='lazy' @click='resetZoom')
         .img-container(:class="{ 'zoomed': isZoomed }")
-            img(ref='imgZoom', :src='imageUrl', alt='Popup Image', :style="imgStyle", @mousedown="startDrag", @mousemove="isDragging", @mouseup="endDrag", @mouseleave="endDrag")
+            //- img(ref='imgZoom', :src='imageUrl', alt='Popup Image', :style="imgStyle", @mousedown="startDrag", @mousemove="isDragging", @mouseup="endDrag", @mouseleave="endDrag")
+            img(ref='imgZoom', src='~/assets/imgs/Flow_Product.png', alt='Popup Image', :style="imgStyle", @mousedown="startDrag", @mousemove="isDragging", @mouseup="endDrag", @mouseleave="endDrag")
            
 </template>
       
@@ -119,8 +120,7 @@ watch(() => props.showModal, (newValue) => {
     z-index: 50;
 
     .modal-content {
-        @apply mx-auto px-6 py-10 bg-bgModal/80 shadow-lg rounded-lg relative;
-        width: 80%;
+        @apply mx-auto px-6 py-10 bg-bgModal/80 shadow-lg rounded-lg relative w-screen lg:w-[80%];
         z-index: 60;
 
         .close-button {
@@ -135,10 +135,12 @@ watch(() => props.showModal, (newValue) => {
         }
 
         .img-container {
-            overflow: hidden;
+            @apply overflow-hidden;
 
             img {
                 transition: transform 0.3s ease;
+
+                @apply w-full h-full object-contain;
 
                 &:active {
                     cursor: grabbing;
