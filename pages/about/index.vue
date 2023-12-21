@@ -115,8 +115,8 @@ main
                             img(src='~/assets/imgs/lightning-border-circle.svg' alt='homepage' width='52' height='52' class='hidden lg:block absolute -top-8 -left-5 mx-auto' loading='lazy')
                             img(src='~/assets/imgs/flag-border-circle.svg' alt='homepage' width='52' height='52' class='hidden lg:block absolute -top-32 right-[10%] mx-auto' loading='lazy')
                             img(src='~/assets/imgs/gift-border-circle.svg' alt='homepage' width='52' height='52' class='hidden lg:block absolute -bottom-20 right-[2%] mx-auto' loading='lazy')
-                    .grid.grid-cols-2.gap-10.mb-40
-                        div(class='w-[55%]').flex.flex-col.items-start.justify-start.gap-6
+                    div(class='grid grid-cols-1 lg:grid-cols-2 mt-44 lg:mt-0 lg:mb-40').gap-10
+                        div(class='w-full lg:w-[55%]').flex.flex-col.items-start.justify-start.gap-6
                             h3.uppercase.font-ultraBold.text-white.text-left
                                 |Our Concept
                                 br
@@ -141,7 +141,7 @@ main
                                         p(class='text-light') Ecosystem
                                         div(class='w-9 h-9 bg-neutral rounded-full flex items-center justify-center')
                                             img(src='~/assets/imgs/icons/arrow-right.svg' alt='homepage' width='16' height='16' class='' loading='lazy')
-                    .grid.grid-cols-3.gap-10
+                    div(class='grid lg:grid-cols-3 mt-20 lg:mt-0').gap-10
                         .flex.flex-col.gap-4.items-start.justify-start 
                             h5.uppercase.font-ultraBold.text-white.text-left Our Mission
                             p.text-left.text-lightGray.text-base 
@@ -216,11 +216,64 @@ main
                                     img(:src='member.avatarUrl' alt='team member' width='16' height='16' class='w-full h-full align-middle rounded-full object-cover' loading='lazy')
                                 h5.member-name.uppercase.font-ultraBold.text-white.text-center.mx-auto.mt-8
                                     | {{ member.name }}
-                                p.text-center.text-lightGray.text-base {{ member.role }}
-                    div(class='relative w-full h-fit flex flex-col gap-4 lg:gap-4')
+                                p.text-center.text-lightGray.text-base.mb-2 {{ member.role }}
+                                div.flex.items-center.w-full.justify-center.gap-2
+                                  button.btn-social
+                                    Icon(name="formkit:linkedin" size='1rem').icon
+                                  button.btn-social
+                                    Icon(name="mingcute:twitter-fill" size='1rem').icon
+                    div(class='relative w-full h-fit flex flex-col gap-4 lg:gap-4 mb-20').element-section
                         h2.uppercase.font-ultraBold.text-white.text-center(class='text-5xl lg:text-6xl') Our Investor
-                        p.text-center.text-lightGray.text-base Meet our dedicated team that originally build this idea to from day zero
-                                    
+                        div.flex.flex-col.justify-center.items-center.gap-4.w-full.mt-20
+                          div(class='gap-x-8 gap-y-20 lg:gap-32 md:w-2/3 lg:w-[80%]').flex.flex-wrap.items-center.justify-center
+                            img.img-investor(src='~/assets/imgs/investor/Poolin-1.svg' alt='homepage' width='150' height='150' class='w-28 lg:w-40' loading='lazy')
+                            img.img-investor(src='~/assets/imgs/investor/neutrino-1.svg' alt='homepage' width='150' height='150' class='w-28  lg:w-40' loading='lazy')
+                            img.img-investor(src='~/assets/imgs/investor/Coinbase-1.svg' alt='homepage' width='150' height='150' class='w-28  lg:w-40' loading='lazy')
+                            img.img-investor(src='~/assets/imgs/investor/swop-1.svg' alt='homepage' width='120' height='150' class='w-28  lg:w-40' loading='lazy')
+                            img.img-investor(src='~/assets/imgs/investor/BTCEX__1.svg' alt='homepage' width='120' height='150' class='w-28  lg:w-40' loading='lazy')
+                            img.img-investor(src='~/assets/imgs/investor/huobi_global-1.svg' alt='homepage' width='200' height='150' class='w-28  lg:w-40' loading='lazy')
+                    .element-section
+                      div(class='grid lg:grid-cols-2').gap-10
+                          div(class='w-full lg:w-[55%]').flex.flex-col.items-start.justify-start.gap-6
+                              h3.uppercase.font-ultraBold.text-white.text-left
+                                  |Our Partners
+                              p.text-left.text-lightGray.text-base Meet our dedicated team that originally build this idea to from day zero
+                              img(src='~/assets/imgs/partners/certik.svg' alt='homepage' width='223' height='223' class='w-40 lg:w-52' loading='lazy')
+                          div(class='grid grid-cols-2 lg:grid-cols-3 grid-rows-2')
+                              div(class='p-8 flex items-center justify-center border-neutral border')
+                                img.img-investor(src='~/assets/imgs/investor/Poolin-1.svg' alt='homepage' width='150' height='150' class='' loading='lazy')
+                              div(class='p-8 flex items-center justify-center border-neutral border')
+                                img.img-investor(src='~/assets/imgs/investor/neutrino-1.svg' alt='homepage' width='150' height='150' class='' loading='lazy')
+                              div(class='p-8 flex items-center justify-center border-neutral border')
+                                img.img-investor(src='~/assets/imgs/investor/swop-1.svg' alt='homepage' width='150' height='150' class='' loading='lazy')
+                              div(class='p-8 flex items-center justify-center border-neutral border')
+                                img.img-investor(src='~/assets/imgs/investor/BTCEX__1.svg' alt='homepage' width='150' height='150' class='' loading='lazy')
+                              div(class='p-8 flex items-center justify-center border-neutral border')
+                                img.img-investor(src='~/assets/imgs/investor/Coinbase-1.svg' alt='homepage' width='150' height='150' class='' loading='lazy')
+                              div(class='p-8 flex items-center justify-center border-neutral border')
+                                img.img-investor(src='~/assets/imgs/investor/huobi_global-1.svg' alt='homepage' width='150' height='150' class='' loading='lazy')
+                                section.bg-dark2.relative.overflow-hidden
+    section.bg-dark2.relative.overflow-hidden
+      .container.mx-auto.z-10
+          .element-section
+              div(class='relative w-full h-fit rounded-3xl').py-10
+                  .flex.flex-col.items-center.justify-center.gap-6.w-full
+                      div(class='grid grid-cols-1 lg:grid-cols-2 gap-4 w-full')
+                          div.z-20.col-1.flex.flex-col.gap-4.items-start.justify-center.w-full.h-full.p-8
+                              h2.uppercase.font-ultraBold.text-white
+                                  | EARLY BIRDS
+                                  br
+                                  | GET THE ALPHA
+                              p.text-lg.text-lightGray Sign up for Waitlist
+                              div(class='flex flex-col space-y-5 lg:space-y-0 lg:flex-row items-center w-full')
+                                  div(class='w-full lg:w-2/3').border.border-primary.h-14
+                                      input(type='text' class='placeholder:text-primary' placeholder="You email address...").w-full.h-full.p-4.outline-none.border-none.bg-transparent.text-primary
+                                  button(type='button' class='bg-primary font-ultraBold px-6 py-3 w-full lg:w-fit h-14 cursor-pointer') Sign Up
+                          div.z-0.col-1.flex.flex-col.items-start.justify-center.w-full.h-full.p-8.relative
+                              div(class='absolute inset-0 -top-80 lg:top-0 bg-center bg-no-repeat bg-cover w-full')
+                                  img(src='~/assets/imgs/icons/global.svg' alt='ellipse' width='855' height='482' loading='lazy' class='transform-center').transform-center
+                              div(class='absolute inset-0 -top-80 lg:top-0 bg-center bg-no-repeat bg-cover bg-blend-overlay mix-blend-normal')
+                                  img(src='~/assets/imgs/icons/background-blue.svg' alt='ellipse' width='470' height='620' loading='lazy' class='transform-center').transform-center                                             
 </template>
 
 <style lang="scss" scoped>
@@ -252,4 +305,30 @@ main
     @apply text-primary duration-300 ease-out cursor-pointer;
   }
 }
+
+.img-investor {
+  @apply opacity-50;
+  &:hover {
+    @apply opacity-100 duration-300 ease-out cursor-pointer;
+  }
+}
+
+.btn-social {
+  @apply w-9 h-9 flex items-center justify-center rounded-full bg-btnSocialColor duration-300 ease-out;
+
+  .icon {
+      @apply text-white;
+  }
+
+  &:hover {
+    @apply bg-primary;
+
+    .icon {
+      @apply text-dark;
+    }
+    
+  }
+}
+
+
 </style>
