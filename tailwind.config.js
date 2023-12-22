@@ -31,7 +31,8 @@ export default {
         bgModal: '#525352',
         cardNeutral: '#454545',
         whiteCustom: '#f0f0f0',
-        btnSocialColor: '#232325'
+        btnSocialColor: '#232325',
+        mobileMenu: '#1F1F1F'
       },
       backgroundImage: {
         pattern: `url('/assets/imgs/home2.webp')`,
