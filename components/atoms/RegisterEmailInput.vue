@@ -4,8 +4,8 @@ const email = ref('')
 const registerEmaiSchema = yup.object({
     email: yup
         .string()
-        .min(5,'* Email must be at least 5 characters')
-        .max(254,'* Email must be at most 254 characters')
+        .min(5, '* Email must be at least 5 characters')
+        .max(254, '* Email must be at most 254 characters')
         .email('* Email must be a valid email')
         .label('Email')
 })
