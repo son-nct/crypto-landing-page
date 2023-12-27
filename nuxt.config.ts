@@ -1,4 +1,10 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+
+const {
+  SUPABASE_URL,
+  SUPABASE_ANON_KEY
+} = process.env
+
 export default defineNuxtConfig({
   devtools: { enabled: true },
   // configure meta
@@ -48,7 +54,19 @@ export default defineNuxtConfig({
     'nuxt-delay-hydration',
     '@vueuse/motion/nuxt',
     '@vueuse/nuxt',
+    '@vee-validate/nuxt',
   ],
+  veeValidate: {
+    // disable or enable auto imports
+    autoImports: true,
+    // Use different names for components
+    componentNames: {
+      Form: 'VeeForm',
+      Field: 'VeeField',
+      FieldArray: 'VeeFieldArray',
+      ErrorMessage: 'VeeErrorMessage',
+    },
+  },
   particles: {
     mode: 'full',
     lazy: true,
@@ -71,4 +89,13 @@ export default defineNuxtConfig({
     debug: process.env.NODE_ENV === 'development',
     mode: 'init',
   },
+  runtimeConfig: {
+    // The private keys which are only available within server-side
+    public: {
+      supabaseConfig: {
+        supabaseURL: SUPABASE_URL,
+        supabaseAnonKey: SUPABASE_ANON_KEY
+      }
+    }
+  }
 })
