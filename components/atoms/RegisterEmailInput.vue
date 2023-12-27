@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import * as yup from 'yup'
+
 const email = ref('')
 const registerEmaiSchema = yup.object({
     email: yup
@@ -10,16 +11,20 @@ const registerEmaiSchema = yup.object({
         .label('Email')
 })
 
-const registerNewEmail = () => {
+const registerNewEmail = async () => {
     const { registerNewEmail } = useSupaBase()
-    registerNewEmail(email.value)
+    const newEmail = await registerNewEmail(email.value)
+    if(newEmail) {
+        alert('Thank you for registering!')
+        email.value = ''
+    }
 }
 
 
 </script>
 
 <template lang="pug">
-VeeForm(:validation-schema='registerEmaiSchema' @submit="registerNewEmail" class='flex flex-col space-y-5 lg:space-y-0 lg:flex-row items-center w-full xl:w-[80%]')
+VeeForm(:validation-schema='registerEmaiSchema' @submit="registerNewEmail" class='flex flex-col space-y-8 lg:space-y-0 lg:flex-row items-center w-full xl:w-[80%]')
     div(class='flex flex-col space-y-5 lg:space-y-0 lg:flex-row items-center w-full')
         div(class='w-full').border.border-primary.h-14    
             VeeField(name="email" v-model="email" type='text' class='placeholder:text-primary' placeholder="You email address...").w-full.h-full.p-4.outline-none.border-none.bg-transparent.text-primary

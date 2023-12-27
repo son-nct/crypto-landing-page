@@ -265,10 +265,8 @@ main
                                   br
                                   | GET THE ALPHA
                               p.text-lg.text-lightGray Sign up for Waitlist
-                              div(class='flex flex-col space-y-5 lg:space-y-0 lg:flex-row items-center w-full')
-                                  div(class='w-full lg:w-2/3').border.border-primary.h-14
-                                      input(type='text' class='placeholder:text-primary' placeholder="You email address...").w-full.h-full.p-4.outline-none.border-none.bg-transparent.text-primary
-                                  button(type='button' class='bg-primary font-ultraBold px-6 py-3 w-full lg:w-fit h-14 cursor-pointer') Sign Up
+                              ClientOnly
+                                AtomsRegisterEmailInput
                           div.z-0.col-1.flex.flex-col.items-start.justify-center.w-full.h-full.p-8.relative
                               div(class='absolute inset-0 -top-80 lg:top-0 bg-center bg-no-repeat bg-cover w-full')
                                   img(src='~/assets/imgs/icons/global.svg' alt='ellipse' width='855' height='482' loading='lazy' class='transform-center').transform-center

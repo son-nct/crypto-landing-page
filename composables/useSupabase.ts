@@ -27,11 +27,14 @@ export const useSupaBase = () => {
             const supabase = connectSupaBase()
             const { data, error } = await supabase.from('emails').insert({
                 email
-            })
+            }).select()
             if (error) throw error
             return data
         } catch (error) {
             console.error('Error fetching emails:', error)
+            if(error?.code === '23505') {
+                alert('This email has been registered. Please try another email.')
+            }
             return null
         }
     }
