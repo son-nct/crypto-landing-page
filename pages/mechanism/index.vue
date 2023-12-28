@@ -2,6 +2,27 @@
 import FlowProductImg from '~/assets/imgs/flow-product.svg'
 import FlowProductMobile from '~/assets/imgs/flow-product-mobile.svg'
 import type { Accordition } from '~/types/accordition'
+import * as yup from 'yup'
+
+const email = ref('')
+const registerEmaiSchema = yup.object({
+    email: yup
+        .string()
+        .min(5, '* Email must be at least 5 characters')
+        .max(254, '* Email must be at most 254 characters')
+        .email('* Email must be a valid email')
+        .label('Email')
+})
+
+const registerNewEmail = async () => {
+    const { registerNewEmail } = useSupaBase()
+    const newEmail = await registerNewEmail(email.value)
+    if(newEmail) {
+        alert('Thank you for registering!')
+        email.value = ''
+    }
+}
+
 const carouselSlides = [
     {
         title: 'Step 1',
@@ -175,10 +196,13 @@ main
                             br
                             | GET THE ALPHA
                         h5.text-neutral.text-xl Sign up for Waitlist
-                        div(class='w-full lg:w-1/2 flex flex-col lg:flex-row items-center')
-                            div(class='w-full lg:w-2/3').border.border-dark.h-14
-                                input(type='text' class='placeholder:text-dark' placeholder="You email address...").w-full.h-full.p-4.outline-none.border-none.bg-transparent.text-dark
-                            button(type='button' class='w-full lg:w-fit mt-4 lg:mt-0').bg-dark.text-white.font-ultraBold.px-6.py-3.h-14.cursor-pointer Sign Up
+                        VeeForm(:validation-schema='registerEmaiSchema' @submit="registerNewEmail" class='w-full lg:w-1/2 flex flex-col gap-8 lg:flex-row items-center')
+                            div(class='w-full lg:w-2/3 flex flex-col lg:flex-row items-center')
+                                div(class='w-full').border.border-dark.h-14
+                                    VeeField(name="email" v-model="email" type='text' class='placeholder:text-dark' placeholder="You email address...").w-full.h-full.p-4.outline-none.border-none.bg-transparent.text-dark
+                                    div.w-full
+                                        VeeErrorMessage(name='email' class="mb-4 w-full text-red-500")
+                            button(type='submit' class='w-full lg:w-fit mt-4 lg:mt-0').bg-dark.text-white.font-ultraBold.px-6.py-3.h-14.cursor-pointer Sign Up
         ClientOnly
             AtomsModalImage(:showModal='showModalImage' :imageUrl='FlowProductImg')                                                                  
 </template>
